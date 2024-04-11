@@ -10,5 +10,5 @@ sudo apt install -y waybar tofi firefox-esr lf
 git clone https://github.com/mmgmp/dotfiles
 
 # Colocar archivos config
-mkdir ~/.config/sway
-cp dotfiles/sway/config ~/.config/sway/config
+mkdir -p ~/.config/sway
+cp dotfiles/.config/sway/config ~/.config/sway/config
