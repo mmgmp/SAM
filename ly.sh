@@ -12,5 +12,5 @@ make
 sudo make install installsystemd
 
 # Activar ly en systemd
-systemctl enable ly.service
+sudo systemctl enable ly.service
 
