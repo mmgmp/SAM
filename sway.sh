@@ -4,7 +4,7 @@
 sudo apt install -y sway
 
 # Instalar programas adicionales
-sudo apt install -y waybar tofi firefox-esr lf unzip network-manager wireplumber pipewire-pulse brightnessctl pulseaudio-utils
+sudo apt install -y waybar tofi firefox-esr lf unzip network-manager wireplumber pipewire-pulse brightnessctl pulseaudio-utils nala swayidle swaylock mpv newsboat
 
 # Crear carpetas del usuario
 xdg-user-dirs-update
@@ -39,3 +39,4 @@ mkdir -p ~/.config/tofi
 cp dotfiles/.config/sway/config ~/.config/sway/config
 cp dotfiles/.config/waybar/* ~/.config/waybar/
 cp dotfiles/.config/sway/tofi ~/.config/tofi/config
+cp dotfiles/.bashrc ~/.bashrc
