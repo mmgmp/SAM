@@ -36,7 +36,7 @@ fc-cache -f -v
 # Descargar fondo de escritorio
 git clone https://github.com/mmgmp/fondos-de-pantalla
 mkdir -p ~/Imágenes/Fondos
-cp /fondos-de-pantalla/pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
+cp fondos-de-pantalla/pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
 
 # Descargar dotfiles de github
 git clone https://github.com/mmgmp/dotfiles
@@ -54,5 +54,5 @@ cp dotfiles/.config/sway/config ~/.config/sway/config
 cp dotfiles/.config/waybar/* ~/.config/waybar/
 cp dotfiles/.config/tofi/config ~/.config/tofi/config
 cp dotfiles/.config/newsboat/config ~/.config/newsboat/config
-cp dotfiles/.config/nvim ~/.config/nvim
+cp dotfiles/.config/nvim/* ~/.config/nvim/
 cp dotfiles/.bashrc ~/.bashrc
