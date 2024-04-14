@@ -38,10 +38,9 @@ rm -r --interactive=never fontawesome-free-5.15.4-desktop
 fc-cache -f -v
 
 # Descargar fondo de escritorio
-git clone https://github.com/mmgmp/fondos-de-pantalla
+wget https://github.com/mmgmp/fondos-de-pantalla/blob/main/pixel-paisaje.png
 mkdir -p ~/Imágenes/Fondos
-cp fondos-de-pantalla/pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
-rm -r --interactive=never fondos-de-pantalla/
+mv pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
 
 # Descargar dotfiles de github
 git clone https://github.com/mmgmp/dotfiles
