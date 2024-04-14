@@ -47,19 +47,14 @@ rm -r --interactive=never fondos-de-pantalla/
 git clone https://github.com/mmgmp/dotfiles
 
 # Colocar archivos config
-mkdir -p ~/.config/sway
-mkdir -p ~/.config/waybar
-mkdir -p ~/.config/tofi
-mkdir -p ~/.config/newsboat
-mkdir -p ~/.config/nvim
-mkdir -p ~/.config/lf
 mkdir -p ~/.local/state/bash
 mkdir -p ~/.local/share/gnupg
 
-cp dotfiles/.config/sway/config ~/.config/sway/config
-cp -r dotfiles/.config/waybar/* ~/.config/waybar/
-cp dotfiles/.config/tofi/config ~/.config/tofi/config
-cp dotfiles/.config/newsboat/config ~/.config/newsboat/config
-cp -r dotfiles/.config/nvim/* ~/.config/nvim/
-cp -r dotfiles/.config/lf/* ~/.config/lf/
+cp -r dotfiles/.config/sway ~/.config/
+cp -r dotfiles/.config/waybar ~/.config/
+cp -r dotfiles/.config/tofi ~/.config/
+cp -r dotfiles/.config/newsboat ~/.config/
+cp -r dotfiles/.config/nvim ~/.config/
+cp -r dotfiles/.config/lf ~/.config/
 cp dotfiles/.bashrc ~/.bashrc
+
