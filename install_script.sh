@@ -61,4 +61,5 @@ cp -r dotfiles/.config/waybar/* ~/.config/waybar/
 cp dotfiles/.config/tofi/config ~/.config/tofi/config
 cp dotfiles/.config/newsboat/config ~/.config/newsboat/config
 cp -r dotfiles/.config/nvim/* ~/.config/nvim/
+cp -r dotfiles/.config/lf/* ~/.config/lf/
 cp dotfiles/.bashrc ~/.bashrc
