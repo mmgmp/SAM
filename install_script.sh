@@ -14,11 +14,11 @@ sudo systemctl enable ly.service
 cd ..
 rm -r --interactive=never ly
 
-# Instalar Sway para Debian 12
-sudo apt install -y sway
+# Instalar sway y complementos
+sudo apt install -y sway swayidle swaylock waybar tofi
 
 # Instalar programas adicionales
-sudo apt install -y waybar tofi firefox-esr lf unzip network-manager brightnessctl nala swayidle swaylock mpv newsboat pass pass-otp neovim abook
+sudo apt install -y firefox-esr lf unzip network-manager brightnessctl mpv newsboat pass pass-otp neovim abook
 
 # Instalar pipewire y wireplumber (audio)
 sudo apt install -y wireplumber pipewire-pulse pulseaudio-utils 
