@@ -30,11 +30,10 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # Descargar e instalar font awesome
 wget https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-desktop.zip
-unzip fontawesome-free-5.15.4-desktop.zip
-rm -r --interactive=never fontawesome-free-5.15.4-desktop.zip
 mkdir -p ~/.local/share/fonts
+unzip fontawesome-free-5.15.4-desktop.zip
 cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
-rm -r --interactive=never fontawesome-free-5.15.4-desktop
+rm -r --interactive=never fontawesome-free-*
 fc-cache -f -v
 
 # Descargar fondo de escritorio
