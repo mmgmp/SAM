@@ -44,8 +44,8 @@ mv pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
 
 # Descargar scripts de tofi
 git clone https://github.com/mmgmp/tofi-scripts
-mkdir -p ~/.local/share/tofi-scripts
-mv /tofi-scripts/*.sh ~/.local/share/tofi-scripts/
+mkdir -p ~/.local/share/bin
+mv /tofi-scripts/*.sh ~/.local/share/bin/
 rm -r --interactive=never tofi-scripts/
 
 # Descargar dotfiles de github
