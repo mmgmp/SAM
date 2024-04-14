@@ -2,7 +2,7 @@
 
 # Crear carpetas del usuario
 xdg-user-dirs-update
-cd Descargas/
+cd ~/Descargas/
 
 # Instalar y activar ly
 sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
