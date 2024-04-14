@@ -24,7 +24,7 @@ sudo apt install -y waybar tofi firefox-esr lf unzip network-manager wireplumber
 systemctl --user --now enable pipewire pipewire-pulse
 systemctl --user --now enable wireplumber.service
 
-# Activar flatpak y configurar flathub
+# Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
