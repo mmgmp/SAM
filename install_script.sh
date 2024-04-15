@@ -41,12 +41,11 @@ cp pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
 # Descargar scripts de tofi
 git clone https://github.com/mmgmp/tofi-scripts
 mkdir -p ~/.local/share/bin
-cp -r /tofi-scripts/*.sh ~/.local/share/bin/
+cp -r tofi-scripts/*.sh ~/.local/share/bin/
 rm -r --interactive=never tofi-scripts/
 
 # Crear carpetas del usuario
 xdg-user-dirs-update
-cd ~/Descargas/
 
 # Descargar dotfiles de github
 git clone https://github.com/mmgmp/dotfiles
