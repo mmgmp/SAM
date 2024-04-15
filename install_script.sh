@@ -34,9 +34,10 @@ rm -r --interactive=never fontawesome-free-*
 fc-cache -f -v
 
 # Descargar fondo de escritorio
-wget https://github.com/mmgmp/fondos-de-pantalla/blob/main/pixel-paisaje.png
-mkdir -p ~/Imágenes/Fondos
-cp pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
+git clone https://github.com/mmgmp/fondos-de-pantalla
+mkdir -p ~/.local/share/backgrounds
+cp fondos-de-pantalla/pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
+rm -r --interactive=never fondos-de-pantalla/
 
 # Descargar scripts de tofi
 git clone https://github.com/mmgmp/tofi-scripts
