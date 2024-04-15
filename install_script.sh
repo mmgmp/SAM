@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Crear carpetas del usuario
-xdg-user-dirs-update
-cd ~/Descargas/
-
 # Instalar y activar ly
 sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
 git clone --recurse-submodules https://github.com/fairyglade/ly
@@ -47,6 +43,10 @@ git clone https://github.com/mmgmp/tofi-scripts
 mkdir -p ~/.local/share/bin
 mv /tofi-scripts/*.sh ~/.local/share/bin/
 rm -r --interactive=never tofi-scripts/
+
+# Crear carpetas del usuario
+xdg-user-dirs-update
+cd ~/Descargas/
 
 # Descargar dotfiles de github
 git clone https://github.com/mmgmp/dotfiles
