@@ -36,12 +36,12 @@ fc-cache -f -v
 # Descargar fondo de escritorio
 wget https://github.com/mmgmp/fondos-de-pantalla/blob/main/pixel-paisaje.png
 mkdir -p ~/Imágenes/Fondos
-mv pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
+cp pixel-paisaje.png ~/Imágenes/Fondos/pixel-paisaje.png
 
 # Descargar scripts de tofi
 git clone https://github.com/mmgmp/tofi-scripts
 mkdir -p ~/.local/share/bin
-mv /tofi-scripts/*.sh ~/.local/share/bin/
+cp /tofi-scripts/*.sh ~/.local/share/bin/
 rm -r --interactive=never tofi-scripts/
 
 # Crear carpetas del usuario
