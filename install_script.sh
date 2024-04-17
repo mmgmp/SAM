@@ -34,6 +34,14 @@ mkdir -p ~/.local/share/fonts
 unzip fontawesome-free-5.15.4-desktop.zip
 cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
 rm -r --interactive=never fontawesome-free-*
+
+# Descargar e instalar Ubuntu Nerd Font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Ubuntu.zip
+unzip Ubuntu.zip
+cp Ubuntu/*.ttf ~/.local/share/fonts
+rm -r --interactive=never Ubuntu*
+
+# Actualizar cache de fuentes
 fc-cache -f -v
 
 # Descargar fondo de escritorio
