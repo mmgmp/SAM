@@ -22,7 +22,7 @@ systemctl --user --now enable pipewire pipewire-pulse
 systemctl --user --now enable wireplumber.service
 
 # Instalar gestor de notificaciones
-sudo apt install -y dunst
+sudo apt install -y dunst libnotify-bin
 
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
