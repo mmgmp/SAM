@@ -21,6 +21,9 @@ sudo apt install -y wireplumber pipewire-pulse pulseaudio-utils
 systemctl --user --now enable pipewire pipewire-pulse
 systemctl --user --now enable wireplumber.service
 
+# Instalar gestor de notificaciones
+sudo apt install -y dunst
+
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
