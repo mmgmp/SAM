@@ -14,7 +14,7 @@ rm -r --interactive=never ly
 sudo apt install -y sway swayidle swaylock waybar tofi
 
 # Instalar programas adicionales
-sudo apt install -y firefox-esr lf unzip network-manager brightnessctl mpv newsboat pass pass-otp neovim abook
+sudo apt install -y firefox-esr lf unzip network-manager brightnessctl mpv newsboat pass pass-otp neovim abook chafa
 
 # Instalar pipewire y wireplumber (audio)
 sudo apt install -y wireplumber pipewire-pulse pulseaudio-utils 
