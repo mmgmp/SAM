@@ -35,7 +35,7 @@ unzip fontawesome-free-5.15.4-desktop.zip
 cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
 rm -r --interactive=never fontawesome-free-*
 
-# Descargar e instalar Ubuntu Nerd Font
+# Descargar e instalar UbuntuMono Nerd Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
 unzip UbuntuMono.zip
 cp Ubuntu/*.ttf ~/.local/share/fonts
@@ -73,5 +73,6 @@ cp -r dotfiles/.config/newsboat ~/.config/
 cp -r dotfiles/.config/nvim ~/.config/
 cp -r dotfiles/.config/lf ~/.config/
 cp -r dotfiles/.config/foot ~/.config/
+cp -r dotfiles/.config/dunst ~/.config/
 cp dotfiles/.bashrc ~/.bashrc
 
