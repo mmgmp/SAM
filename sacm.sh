@@ -31,7 +31,7 @@ sudo apt install -y mpv brightnessctl swayimg
 sudo apt install -y unzip network-manager newsboat pass pass-otp neovim abook
 
 # Instalar PipeWire
-sudo apt install -y pipewire pulseaudio-utils 
+sudo apt install -y pipewire pulseaudio-utils pavucontrol
 systemctl --user --now enable wireplumber.service
 
 # Temas GTK
