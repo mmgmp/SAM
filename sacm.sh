@@ -38,9 +38,9 @@ systemctl --user --now enable wireplumber.service
 sudo apt install -y papirus-icon-theme arc-theme
 
 # Descargar nwg-look
-wget https://github.com/nwg-piotr/nwg-look/releases/download/v0.2.7/nwg-look-v0.2.7_x86_64.tar.gz
-tar -xf nwg-look-v0.2.7_x86_64.tar.gz
-sudo mv nwg-look /usr/bin/nwg-look
+#wget https://github.com/nwg-piotr/nwg-look/releases/download/v0.2.7/nwg-look-v0.2.7_x86_64.tar.gz
+#tar -xf nwg-look-v0.2.7_x86_64.tar.gz
+#sudo mv nwg-look /usr/bin/nwg-look
 
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
