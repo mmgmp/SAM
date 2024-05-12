@@ -5,7 +5,7 @@ xdg-user-dirs-update
 
 # Instalar y activar ly
 
-# Instalar sway
+# Instalar sway y complementos
 sudo apt install -y sway swayidle swaybg swaylock waybar
 
 # Sway autotiling
@@ -18,14 +18,17 @@ sudo mv autotiling /usr/bin/autotiling
 # Menu de arranque
 sudo apt install -y tofi
 
-# Instalar programas adicionales
-sudo apt install -y unzip network-manager brightnessctl mpv newsboat pass pass-otp neovim abook chafa
-
 # Navegador
 sudo apt install -y firefox-esr
 
 # Gestor de archivos
 sudo apt install -y lf
+
+# Multimedia
+sudo apt install -y mpv brightnessctl swayimg
+
+# Instalar programas adicionales
+sudo apt install -y unzip network-manager newsboat pass pass-otp neovim abook
 
 # Instalar PipeWire
 sudo apt install -y pipewire pulseaudio-utils 
@@ -57,25 +60,17 @@ wget https://raw.githubusercontent.com/mmgmp/fondos-de-pantalla/main/pixel-paisa
 mv pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
 
 # Descargar scripts de tofi
-git clone https://github.com/mmgmp/tofi-scripts
 mkdir -p ~/.local/share/bin
+git clone https://github.com/mmgmp/tofi-scripts
 cp -r tofi-scripts/*.sh ~/.local/share/bin/
 rm -r --interactive=never tofi-scripts/
 
-# Descargar dotfiles de github
+# Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
+cp dotfiles/.bashrc ~/.bashrc
+cp -r dotfiles/.config ~/
+cp -r dotfiles/.local/bin/* ~/.local/bin/
 
-# Colocar archivos config
+# Carpeatas XDG
 mkdir -p ~/.local/state/bash
 mkdir -p ~/.local/share/gnupg
-
-cp -r dotfiles/.config/sway ~/.config/
-cp -r dotfiles/.config/waybar ~/.config/
-cp -r dotfiles/.config/tofi ~/.config/
-cp -r dotfiles/.config/newsboat ~/.config/
-cp -r dotfiles/.config/nvim ~/.config/
-cp -r dotfiles/.config/lf ~/.config/
-cp -r dotfiles/.config/foot ~/.config/
-cp -r dotfiles/.config/dunst ~/.config/
-cp dotfiles/.bashrc ~/.bashrc
-
