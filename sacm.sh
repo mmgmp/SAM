@@ -10,7 +10,7 @@ sudo apt install -y sway swayidle swaybg swaylock waybar
 
 # Sway autotiling
 sudo apt install -y python3-i3ipc
-https://raw.githubusercontent.com/nwg-piotr/autotiling/master/autotiling/main.py
+wget https://raw.githubusercontent.com/nwg-piotr/autotiling/master/autotiling/main.py
 mv main.py autotiling
 chmod +x autotiling
 sudo mv autotiling /usr/bin/autotiling
@@ -52,10 +52,9 @@ rm -r --interactive=never UbuntuMono*
 fc-cache -f -v
 
 # Descargar fondo de escritorio
-git clone https://github.com/mmgmp/fondos-de-pantalla
 mkdir -p ~/.local/share/backgrounds
-cp fondos-de-pantalla/pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
-rm -r --interactive=never fondos-de-pantalla/
+wget https://raw.githubusercontent.com/mmgmp/fondos-de-pantalla/main/pixel-paisaje.png
+mv pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
 
 # Descargar scripts de tofi
 git clone https://github.com/mmgmp/tofi-scripts
