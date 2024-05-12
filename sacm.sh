@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Crear carpetas de usuario
+xdg-user-dirs-update
+
 # Instalar y activar ly
 
 # Instalar sway y complementos
@@ -47,9 +50,6 @@ git clone https://github.com/mmgmp/tofi-scripts
 mkdir -p ~/.local/share/bin
 cp -r tofi-scripts/*.sh ~/.local/share/bin/
 rm -r --interactive=never tofi-scripts/
-
-# Crear carpetas del usuario
-xdg-user-dirs-update
 
 # Descargar dotfiles de github
 git clone https://github.com/mmgmp/dotfiles
