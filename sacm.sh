@@ -27,9 +27,8 @@ sudo apt install -y firefox-esr
 # Gestor de archivos
 sudo apt install -y lf
 
-# Instalar pipewire y wireplumber (audio)
-sudo apt install -y wireplumber pipewire-pulse pulseaudio-utils 
-systemctl --user --now enable pipewire pipewire-pulse
+# Instalar PipeWire
+sudo apt install -y pipewire pulseaudio-utils 
 systemctl --user --now enable wireplumber.service
 
 # Instalar flatpak y añadir flathub.com
