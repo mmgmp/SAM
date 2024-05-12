@@ -29,18 +29,18 @@ systemctl --user --now enable wireplumber.service
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Descargar e instalar font awesome
+# Descargar Font Awesome 5
 wget https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-desktop.zip
 mkdir -p ~/.local/share/fonts
 unzip fontawesome-free-5.15.4-desktop.zip
 cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
 rm -r --interactive=never fontawesome-free-*
 
-# Descargar e instalar UbuntuMono Nerd Font
+# Descargar UbuntuMono Nerd Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
 unzip UbuntuMono.zip
 cp Ubuntu/*.ttf ~/.local/share/fonts
-rm -r --interactive=never Ubuntu*
+rm -r --interactive=never UbuntuMono*
 
 # Actualizar cache de fuentes
 fc-cache -f -v
