@@ -28,7 +28,7 @@ sudo apt install -y lf
 sudo apt install -y mpv brightnessctl swayimg
 
 # Notificaciones
-sudo apt install -y sway-notification-center
+sudo apt install -y sway-notification-center libnotify-bin
 
 # Instalar programas adicionales
 sudo apt install -y unzip network-manager newsboat pass pass-otp neovim abook
