@@ -34,6 +34,11 @@ sudo apt install -y unzip network-manager newsboat pass pass-otp neovim abook
 sudo apt install -y pipewire pulseaudio-utils 
 systemctl --user --now enable wireplumber.service
 
+# Descargar nwg-look
+wget https://github.com/nwg-piotr/nwg-look/releases/download/v0.2.7/nwg-look-v0.2.7_x86_64.tar.gz
+tar -xf nwg-look-v0.2.7_x86_64.tar.gz
+sudo mv nwg-look /usr/bin/nwg-look
+
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
