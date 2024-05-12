@@ -3,7 +3,7 @@
 # Instalar y activar ly
 
 # Instalar sway y complementos
-sudo apt install -y sway swayidle swaybg swaylock waybar
+sudo apt install -y sway swayidle swaybg swaylock waybar xwayland
 
 # Sway autotiling
 sudo apt install -y python3-i3ipc
