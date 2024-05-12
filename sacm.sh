@@ -1,14 +1,6 @@
 #!/bin/bash
 
 # Instalar y activar ly
-sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly/
-make
-sudo make install installsystemd
-sudo systemctl enable ly.service
-cd ..
-rm -r --interactive=never ly
 
 # Instalar sway y complementos
 sudo apt install -y sway swayidle swaylock waybar tofi
