@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 # Instalar y activar ly
 
 # Instalar sway y complementos
@@ -43,24 +41,21 @@ sudo apt install -y papirus-icon-theme arc-theme
 wget https://github.com/nwg-piotr/nwg-look/releases/download/v0.2.7/nwg-look-v0.2.7_x86_64.tar.gz
 tar -xf nwg-look-v0.2.7_x86_64.tar.gz
 sudo mv nwg-look /usr/bin/nwg-look
-rm -r --interactive=never nwg-look-*
 
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Descargar Font Awesome 5
-wget https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-desktop.zip
 mkdir -p ~/.local/share/fonts
+wget https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-desktop.zip
 unzip fontawesome-free-5.15.4-desktop.zip
 cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
-rm -r --interactive=never fontawesome-free-*
 
-# Descargar UbuntuMono Nerd Font
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
-unzip UbuntuMono.zip
-cp Ubuntu/*.ttf ~/.local/share/fonts
-rm -r --interactive=never UbuntuMono*
+# Descargar FiraMono Nerd Font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
+unzip FiraMono.zip
+cp Fira*.otf ~/.local/share/fonts
 
 # Actualizar cache de fuentes
 fc-cache -f -v
@@ -74,7 +69,6 @@ mv pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
 mkdir -p ~/.local/share/bin
 git clone https://github.com/mmgmp/tofi-scripts
 cp -r tofi-scripts/*.sh ~/.local/share/bin/
-rm -r --interactive=never tofi-scripts/
 
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
@@ -86,3 +80,7 @@ cp -r dotfiles/.local ~/
 xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
 mkdir -p ~/.local/share/gnupg
+
+# Limpiar restos
+cd ~/
+rm -r --interactive=never sacm/
