@@ -5,19 +5,25 @@ xdg-user-dirs-update
 
 # Instalar y activar ly
 
-# Instalar sway y complementos
-sudo apt install -y sway swayidle swaylock waybar tofi
+# Instalar sway
+sudo apt install -y sway swayidle swaybg swaylock waybar
+
+# Menu de arranque
+sudo apt install -y tofi
 
 # Instalar programas adicionales
-sudo apt install -y firefox-esr lf unzip network-manager brightnessctl mpv newsboat pass pass-otp neovim abook chafa
+sudo apt install -y unzip network-manager brightnessctl mpv newsboat pass pass-otp neovim abook chafa
+
+# Navegador
+sudo apt install -y firefox-esr
+
+# Gestor de archivos
+sudo apt install -y lf
 
 # Instalar pipewire y wireplumber (audio)
 sudo apt install -y wireplumber pipewire-pulse pulseaudio-utils 
 systemctl --user --now enable pipewire pipewire-pulse
 systemctl --user --now enable wireplumber.service
-
-# Instalar gestor de notificaciones
-sudo apt install -y dunst libnotify-bin
 
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
