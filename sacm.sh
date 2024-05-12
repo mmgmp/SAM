@@ -8,6 +8,13 @@ xdg-user-dirs-update
 # Instalar sway
 sudo apt install -y sway swayidle swaybg swaylock waybar
 
+# Sway autotiling
+sudo apt install -y python3-i3ipc
+https://raw.githubusercontent.com/nwg-piotr/autotiling/master/autotiling/main.py
+mv main.py autotiling
+chmod +x autotiling
+sudo mv autotiling /usr/bin/autotiling
+
 # Menu de arranque
 sudo apt install -y tofi
 
