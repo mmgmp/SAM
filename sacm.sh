@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Crear carpetas de usuario
-xdg-user-dirs-update
+
 
 # Instalar y activar ly
 
@@ -81,8 +80,9 @@ rm -r --interactive=never tofi-scripts/
 git clone https://github.com/mmgmp/dotfiles
 cp dotfiles/.bashrc ~/.bashrc
 cp -r dotfiles/.config ~/
-cp -r dotfiles/.local/bin/* ~/.local/bin/
+cp -r dotfiles/.local ~/
 
 # Carpeatas XDG
+xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
 mkdir -p ~/.local/share/gnupg
