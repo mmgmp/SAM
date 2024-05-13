@@ -63,9 +63,9 @@ wget https://raw.githubusercontent.com/mmgmp/fondos-de-pantalla/main/pixel-paisa
 mv pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
 
 # Descargar scripts de tofi
-mkdir -p ~/.local/share/bin
+mkdir -p ~/.local/bin
 git clone https://github.com/mmgmp/tofi-scripts
-cp -r tofi-scripts/*.sh ~/.local/share/bin/
+cp -r tofi-scripts/*.sh ~/.local/bin/
 
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
