@@ -34,9 +34,6 @@ sudo apt install -y unzip curl network-manager newsboat pass pass-otp pinentry-g
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
 systemctl --user --now enable wireplumber.service
 
-# Temas GTK
-sudo apt install -y papirus-icon-theme arc-theme
-
 # Descargar nwg-look
 #wget https://github.com/nwg-piotr/nwg-look/releases/download/v0.2.7/nwg-look-v0.2.7_x86_64.tar.gz
 #tar -xf nwg-look-v0.2.7_x86_64.tar.gz
