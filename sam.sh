@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# Instalar y activar ly
-
 # Instalar sway y complementos
 sudo apt install -y sway swayidle swaybg swaylock waybar xwayland
+
+# Iniciar sway en la tty
+touch .profile
+printf "\n# Autoejecutar sway el la tty\nif [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then\n    exec sway\nfi" >> .profile
 
 # Sway autotiling
 sudo apt install -y python3-i3ipc
