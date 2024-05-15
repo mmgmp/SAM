@@ -52,6 +52,12 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.z
 unzip FiraMono.zip -d FiraMonoNerdFont
 cp FiraMonoNerdFont/Fira*.otf ~/.local/share/fonts
 
+# Descargar UbuntuMono Nerd Font
+mkdir UbuntuMonoNerdFont
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
+unzip UbuntuMono.zip -d UbuntuMonoNerdFont
+cp UbuntuMonoNerdFont/Ubuntu*.ttf ~/.local/share/fonts
+
 # Actualizar cache de fuentes
 fc-cache -f -v
 
