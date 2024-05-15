@@ -47,9 +47,10 @@ unzip fontawesome-free-5.15.4-desktop.zip
 cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
 
 # Descargar FiraMono Nerd Font
+mkdir FiraMonoNerdFont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
-unzip FiraMono.zip
-cp Fira*.otf ~/.local/share/fonts
+unzip FiraMono.zip -d FiraMonoNerdFont
+cp FiraMonoNerdFont/Fira*.otf ~/.local/share/fonts
 
 # Actualizar cache de fuentes
 fc-cache -f -v
