@@ -75,6 +75,7 @@ chmod +x ~/.local/bin/*
 # Carpeatas XDG
 xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
+touch ~/.local/state/bash/history
 mkdir -p ~/.local/share/gnupg
 
 # Limpiar restos
