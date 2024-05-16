@@ -76,6 +76,8 @@ chmod +x ~/.local/bin/*
 xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
+source .bashrc
+rm .bash_history
 mkdir -p ~/.local/share/gnupg
 
 # Limpiar restos
