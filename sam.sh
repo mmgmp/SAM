@@ -3,10 +3,6 @@
 # Instalar sway y complementos
 sudo apt install -y sway swayidle swaybg swaylock waybar xwayland
 
-# Iniciar sway en la tty
-touch .profile
-printf "\n# Autoejecutar sway el la tty\nif [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then\n    exec sway\nfi" >> .profile
-
 # Sway autotiling
 sudo apt install -y python3-i3ipc
 wget https://raw.githubusercontent.com/nwg-piotr/autotiling/master/autotiling/main.py
@@ -30,7 +26,7 @@ sudo apt install -y mpv brightnessctl swayimg
 sudo apt install -y sway-notification-center libnotify-bin
 
 # Programas adicionales
-sudo apt install -y unzip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop
+sudo apt install -y unzip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop bash-completion
 
 # Instalar PipeWire
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
@@ -79,4 +75,8 @@ mkdir -p ~/.local/share/gnupg
 
 # Limpiar restos
 cd ~/
-rm -r --interactive=never sam/
+rm -r --interactive=never SAM/
+
+# Iniciar sway en la tty
+touch .profile
+printf "\n# Autoejecutar sway el la tty\nif [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then\n    exec sway\nfi" >> .profile
