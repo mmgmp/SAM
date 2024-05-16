@@ -68,6 +68,10 @@ cp dotfiles/.bashrc ~/.bashrc
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 
+# Hacer scripts ejecutables
+chmod +x ~/.config/waybar/modules/*
+chmod +x ~/.local/bin/*
+
 # Carpeatas XDG
 xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
