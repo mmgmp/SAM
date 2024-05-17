@@ -65,6 +65,7 @@ mv pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
 cp dotfiles/.bashrc ~/.bashrc
+cp dotfiles/.prfile ~/.profile
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 
@@ -76,14 +77,8 @@ chmod +x ~/.local/bin/*
 xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
-source .bashrc
-rm .bash_history
 mkdir -p ~/.local/share/gnupg
 
 # Limpiar restos
 cd ~/
 rm -r --interactive=never SAM/
-
-# Iniciar sway en la tty
-touch .profile
-printf "\n# Autoejecutar sway el la tty\nif [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then\n    exec sway\nfi" >> .profile
