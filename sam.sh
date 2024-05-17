@@ -26,7 +26,7 @@ sudo apt install -y mpv brightnessctl swayimg
 sudo apt install -y sway-notification-center libnotify-bin
 
 # Programas adicionales
-sudo apt install -y unzip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop bash-completion
+sudo apt install -y unzip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop bash-completion udisks2
 
 # Instalar PipeWire
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
