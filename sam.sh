@@ -34,7 +34,7 @@ systemctl --user --now enable wireplumber.service
 
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Descargar Font Awesome 5
 mkdir -p ~/.local/share/fonts
