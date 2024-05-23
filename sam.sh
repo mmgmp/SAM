@@ -27,7 +27,7 @@ installpkg lf
 installpkg mpv brightnessctl swayimg
 
 # Notificaciones
-installpkg sway-notification-center libnotify-bin
+installpkg mako-notifier libnotify-bin
 
 # Programas adicionales
 installpkg unzip zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop bash-completion udisks2
