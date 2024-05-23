@@ -40,20 +40,21 @@ systemctl --user --now enable wireplumber.service
 installpkg flatpak
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Descargar Font Awesome 5
+# Crear carpetas para fuentes e iconos
 mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/share/icons/fontawesome5
+
+# Descargar Font Awesome 5
 wget https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-desktop.zip
 unzip fontawesome-free-5.15.4-desktop.zip
-cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
+cp fontawesome-free-5.15.4-desktop/svgs/* ~/.local/share/icons/fontawesome5
 
 # Descargar FiraMono Nerd Font
-mkdir FiraMono
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
 unzip FiraMono.zip -d FiraMono
 cp FiraMono/Fira*.otf ~/.local/share/fonts
 
 # Descargar UbuntuMono Nerd Font
-mkdir UbuntuMono
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
 unzip UbuntuMono.zip -d UbuntuMono
 cp UbuntuMono/Ubuntu*.ttf ~/.local/share/fonts
