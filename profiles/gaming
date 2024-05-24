@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Istalar steam flatpak
+# Instalar steam flatpak
 flatpak install flathub com.valvesoftware.Steam >/dev/null 2>&1
 
 # Instalar lutris flatpak
