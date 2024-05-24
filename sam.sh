@@ -102,7 +102,7 @@ fonts_setup >/dev/null 2>&1
 custom_setup >/dev/null 2>&1
 
 printf "¿Quieres instalar el perfil para gaming? [s/N]" ; read ans
-[ $ans = "s" ] && printf "Instalando el perfil gaming..." ; bash ~/SAM/profiles/gaming ; printf "Instalado" || printf "No se instalará el perfil gaming"
+[ $ans = "s" ] && printf "Instalando el perfil gaming..." ; bash ~/SAM/profiles/gaming >/dev/null 2>&1 ; printf "Instalado" || printf "No se instalará el perfil gaming"
 
 # Limpiar restos
 cd ~/
