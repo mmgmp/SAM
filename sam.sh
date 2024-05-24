@@ -95,6 +95,7 @@ custom_setup() {
 
 #= SCRIPT ====================================================================================#
 
+printf "Bienvenido,\nSe va ha proceder a la instalación del sistema, espera por favor"
 main_setup >/dev/null 2>&1
 audio_setup >/dev/null 2>&1
 flatpak_setup >/dev/null 2>&1
@@ -107,3 +108,5 @@ printf "¿Quieres instalar el perfil para gaming? [s/N]" ; read ans
 # Limpiar restos
 cd ~/
 rm -r --interactive=never SAM/
+
+printf "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'"
