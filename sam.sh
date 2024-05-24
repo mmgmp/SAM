@@ -105,4 +105,4 @@ custom_setup
 cd ~/
 rm -r --interactive=never SAM/
 
-printf "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'"
+printf "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
