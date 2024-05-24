@@ -95,15 +95,11 @@ custom_setup() {
 
 #= SCRIPT ====================================================================================#
 
-printf "Bienvenido,\nSe va ha proceder a la instalación del sistema, espera por favor"
-main_setup >/dev/null 2>&1
-audio_setup >/dev/null 2>&1
-flatpak_setup >/dev/null 2>&1
-fonts_setup >/dev/null 2>&1
-custom_setup >/dev/null 2>&1
-
-printf "¿Quieres instalar el perfil para gaming? [s/N]" ; read ans
-[ $ans = "s" ] && printf "Instalando el perfil gaming..." ; bash ~/SAM/profiles/gaming >/dev/null 2>&1 ; printf "Instalado" || printf "No se instalará el perfil gaming"
+main_setup
+audio_setup
+flatpak_setup
+fonts_setup
+custom_setup
 
 # Limpiar restos
 cd ~/
