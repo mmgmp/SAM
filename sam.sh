@@ -36,6 +36,12 @@ installpkg unzip zip curl network-manager newsboat pass pass-otp pinentry-gnome3
 installpkg pipewire pulseaudio-utils pavucontrol
 systemctl --user --now enable wireplumber.service
 
+# Montar USBs en /media
+mkdir -p /etc/udev/rules.d
+touch 99-udisks2.rules
+printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > 99-udisks2.rules
+sudo mv 99-udisks2.rules /etc/udev/rules.d/99-udisks2.rules
+
 # Instalar flatpak y añadir flathub.com
 installpkg flatpak
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
