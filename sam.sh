@@ -30,7 +30,7 @@ installpkg mpv brightnessctl swayimg
 installpkg mako-notifier libnotify-bin
 
 # Programas adicionales
-installpkg unzip zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop bash-completion udisks2 gammastep
+installpkg unzip zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep
 
 # Instalar PipeWire
 installpkg pipewire pulseaudio-utils pavucontrol
