@@ -76,7 +76,7 @@ mv pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
 cp dotfiles/.bashrc ~/.bashrc
-cp dotfiles/.prfile ~/.profile
+cp dotfiles/.profile ~/.profile
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 
