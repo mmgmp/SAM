@@ -88,7 +88,6 @@ chmod +x ~/.local/bin/*
 xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
-mkdir -p ~/.local/share/gnupg
 
 # Limpiar restos
 cd ~/
