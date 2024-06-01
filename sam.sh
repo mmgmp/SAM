@@ -26,7 +26,7 @@ main_setup() {
 	sudo apt install -y mako-notifier libnotify-bin
 
 	# Programas adicionales
-	sudo apt install -y unzip zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep
+	sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep
 }
 
 audio_setup() {
