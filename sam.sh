@@ -75,6 +75,10 @@ cp dotfiles/.profile ~/.profile
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 
+# Descargar yt-dlp actual
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+mv yt-dlp ~/.local/bin/yt-dlp
+
 # Hacer scripts ejecutables
 chmod +x ~/.config/waybar/modules/*
 chmod +x ~/.local/bin/*
