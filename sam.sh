@@ -60,6 +60,9 @@ touch 99-udisks2.rules
 printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > 99-udisks2.rules
 sudo mv 99-udisks2.rules /etc/udev/rules.d/99-udisks2.rules
 
+# Instalar Starship prompt
+curl -sS https://starship.rs/install.sh | sh
+
 # Descargar fondo de escritorio
 mkdir -p ~/.local/share/backgrounds
 wget https://raw.githubusercontent.com/mmgmp/fondos-de-pantalla/main/pixel-paisaje.png
@@ -76,12 +79,12 @@ cp -r dotfiles/.local ~/
 chmod +x ~/.config/waybar/modules/*
 chmod +x ~/.local/bin/*
 
-# Carpeatas XDG
+# Carpetas XDG
 xdg-user-dirs-update
 mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
 
-# Borrar archivo .sudo_as_admin_successful
+# Desactivar archivo .sudo_as_admin_successful
 touch no_admin_flag
 printf 'Defaults !admin_flag' > no_admin_flag
 sudo mv no_admin_flag /etc/sudoers.d/no_admin_flag
