@@ -23,7 +23,7 @@ sudo apt install -y mpv brightnessctl swayimg
 sudo apt install -y mako-notifier libnotify-bin
 
 # Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep
+sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep gh
 
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
