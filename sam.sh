@@ -63,17 +63,16 @@ sudo mv 99-udisks2.rules /etc/udev/rules.d/99-udisks2.rules
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
 
-# Descargar fondo de escritorio
-mkdir -p ~/.local/share/backgrounds
-wget https://raw.githubusercontent.com/mmgmp/fondos-de-pantalla/main/pixel-paisaje.png
-mv pixel-paisaje.png ~/.local/share/backgrounds/pixel-paisaje.png
-
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
 cp dotfiles/.bashrc ~/.bashrc
 cp dotfiles/.profile ~/.profile
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
+
+# Crear archivo para el fondo de pantalla
+touch ~/.config/sway/wallpaper
+printf "output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill" > ~/.config/sway/wallpaper 
 
 # Descargar yt-dlp actual
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
