@@ -26,7 +26,7 @@ sudo apt install -y mako-notifier libnotify-bin
 sudo apt install -y grim slurp
 
 # Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep gh
+sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep gh zathura zathura-pdf-poppler
 
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
