@@ -70,10 +70,6 @@ cp dotfiles/.profile ~/.profile
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 
-# Crear archivo para el fondo de pantalla
-touch ~/.config/sway/wallpaper
-printf "output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill" > ~/.config/sway/wallpaper 
-
 # Descargar yt-dlp actual
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 mv yt-dlp ~/.local/bin/yt-dlp
