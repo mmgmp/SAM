@@ -84,9 +84,8 @@ mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
 
 # Desactivar archivo .sudo_as_admin_successful
-touch no_admin_flag
-printf 'Defaults !admin_flag' > no_admin_flag
-sudo mv no_admin_flag /etc/sudoers.d/no_admin_flag
+sudo touch /etc/sudoers.d/no_admin_flag
+sudo printf 'Defaults !admin_flag' > /etc/sudoers.d/no_admin_flag
 
 # Limpiar restos
 cd ~/
