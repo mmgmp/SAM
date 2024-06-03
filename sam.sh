@@ -22,6 +22,9 @@ sudo apt install -y mpv brightnessctl swayimg
 # Notificaciones
 sudo apt install -y mako-notifier libnotify-bin
 
+# Captura de pantalla
+sudo apt install -y grim slurp
+
 # Programas adicionales
 sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep gh
 
