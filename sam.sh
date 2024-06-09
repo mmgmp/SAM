@@ -59,9 +59,8 @@ fc-cache -f -v
 
 # Montar USBs en /media
 mkdir -p /etc/udev/rules.d
-touch 99-udisks2.rules
-printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > 99-udisks2.rules
-sudo mv 99-udisks2.rules /etc/udev/rules.d/99-udisks2.rules
+sudo touch /etc/udev/rules.d/99-udisks2.rules
+sudo printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > /etc/udev/rules.d/99-udisks2.rules
 
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
