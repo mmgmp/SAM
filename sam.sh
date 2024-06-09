@@ -73,6 +73,11 @@ cp dotfiles/.profile ~/.profile
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 
+# Configurar pinentry-gnome3
+mkdir -p ~/.local/share
+touch ~/.local/share/gpg-agent.conf
+printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.conf
+
 # Descargar yt-dlp actual
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 mv yt-dlp ~/.local/bin/yt-dlp
