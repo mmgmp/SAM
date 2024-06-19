@@ -62,10 +62,8 @@ curl -sS https://starship.rs/install.sh | sh
 
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
-cp dotfiles/.bashrc ~/.bashrc
-cp dotfiles/.profile ~/.profile
-cp -r dotfiles/.config ~/
-cp -r dotfiles/.local ~/
+cp -r dotfiles/* ~/
+rm ~/LICENSE ~/README.md
 
 # Instalar y configurar pinentry-gnome3
 sudo apt install -y pinentry-gnome3
