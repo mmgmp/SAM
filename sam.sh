@@ -77,9 +77,9 @@ mkdir -p ~/.local/share
 touch ~/.local/share/gpg-agent.conf
 printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.conf
 
-# Descargar yt-dlp actual
+# Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
-mv yt-dlp ~/.local/bin/yt-dlp
+sudo mv -f yt-dlp /usr/bin/yt-dlp
 
 # Hacer scripts ejecutables
 chmod +x ~/.config/waybar/modules/*
