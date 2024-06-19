@@ -39,11 +39,6 @@ flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/fl
 # Crear carpetas para fuentes
 mkdir -p ~/.local/share/fonts
 
-# Descargar Font Awesome 5
-wget https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-desktop.zip
-unzip fontawesome-free-5.15.4-desktop.zip
-cp fontawesome-free-5.15.4-desktop/otfs/*.otf ~/.local/share/fonts
-
 # Descargar FiraMono Nerd Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
 unzip FiraMono.zip -d FiraMono
