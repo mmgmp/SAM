@@ -17,7 +17,7 @@ sudo apt install -y firefox-esr
 sudo apt install -y lf
 
 # Multimedia
-sudo apt install -y mpv brightnessctl swayimg
+sudo apt install -y mpv brightnessctl swayimg zathura zathura-pdf-poppler gammastep
 
 # Notificaciones
 sudo apt install -y mako-notifier libnotify-bin
@@ -26,7 +26,7 @@ sudo apt install -y mako-notifier libnotify-bin
 sudo apt install -y grim slurp
 
 # Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp pinentry-gnome3 neovim abook htop neofetch bash-completion udisks2 gammastep gh zathura zathura-pdf-poppler wob
+sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop neofetch bash-completion udisks2 gh wob
 
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
@@ -72,7 +72,8 @@ cp dotfiles/.profile ~/.profile
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 
-# Configurar pinentry-gnome3
+# Instalar y configurar pinentry-gnome3
+sudo apt install -y pinentry-gnome3
 mkdir -p ~/.local/share
 touch ~/.local/share/gpg-agent.conf
 printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.conf
