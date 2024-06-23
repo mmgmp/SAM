@@ -54,7 +54,6 @@ fc-cache -f -v
 
 # Montar USBs en /media
 mkdir -p /etc/udev/rules.d
-sudo touch /etc/udev/rules.d/99-udisks2.rules
 sudo printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > /etc/udev/rules.d/99-udisks2.rules
 
 # Instalar Starship prompt
@@ -68,7 +67,6 @@ rm ~/LICENSE ~/README.md
 # Instalar y configurar pinentry-gnome3
 sudo apt install -y pinentry-gnome3
 mkdir -p ~/.local/share
-touch ~/.local/share/gpg-agent.conf
 printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.conf
 
 # Descargar yt-dlp de github
@@ -85,7 +83,6 @@ mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
 
 # Desactivar archivo .sudo_as_admin_successful
-sudo touch /etc/sudoers.d/no_admin_flag
 sudo printf 'Defaults !admin_flag' > /etc/sudoers.d/no_admin_flag
 
 # Limpiar restos
