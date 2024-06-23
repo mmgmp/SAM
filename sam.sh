@@ -77,8 +77,10 @@ sudo mv -f yt-dlp /usr/bin/yt-dlp
 chmod +x ~/.config/waybar/modules/*
 chmod +x ~/.local/bin/*
 
-# Carpetas XDG
+# Crear carpetas del usuario
 xdg-user-dirs-update
+
+# Colocar historial de bash en .local
 mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
 
