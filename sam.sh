@@ -10,9 +10,6 @@ mv main.py autotiling
 chmod +x autotiling
 sudo mv autotiling /usr/bin/autotiling
 
-# Navegador
-sudo apt install -y firefox-esr
-
 # Gestor de archivos
 sudo apt install -y lf
 
@@ -35,6 +32,13 @@ systemctl --user --now enable wireplumber.service
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# Instalar tema oscuro
+flatpak install org.gtk.Gtk3theme.Adwaita-dark
+
+# Instalar navegador web
+flatpak install flathub io.gitlab.librewolf-community
+sudo flatpak override --env=GTK_THEME=Adwaita-dark io.gitlab.librewolf-community
 
 # Crear carpetas para fuentes
 mkdir -p ~/.local/share/fonts
