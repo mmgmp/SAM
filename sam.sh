@@ -34,10 +34,10 @@ sudo apt install -y flatpak
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Instalar tema oscuro
-flatpak install org.gtk.Gtk3theme.Adwaita-dark
+flatpak install -y org.gtk.Gtk3theme.Adwaita-dark
 
 # Instalar navegador web
-flatpak install flathub io.gitlab.librewolf-community
+flatpak install -y io.gitlab.librewolf-community
 sudo flatpak override --env=GTK_THEME=Adwaita-dark io.gitlab.librewolf-community
 
 # Crear carpetas para fuentes
