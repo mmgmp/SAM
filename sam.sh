@@ -10,6 +10,12 @@ mv main.py autotiling
 chmod +x autotiling
 sudo mv autotiling /usr/bin/autotiling
 
+# Navegador web
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install -y brave-browser
+
 # Gestor de archivos
 sudo apt install -y lf
 
@@ -32,13 +38,6 @@ systemctl --user --now enable wireplumber.service
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-# Instalar tema oscuro
-flatpak install -y org.gtk.Gtk3theme.Adwaita-dark
-
-# Instalar navegador web
-flatpak install -y io.gitlab.librewolf-community
-sudo flatpak override --env=GTK_THEME=Adwaita-dark io.gitlab.librewolf-community
 
 # Crear carpetas para fuentes
 mkdir -p ~/.local/share/fonts
