@@ -29,7 +29,7 @@ sudo apt install -y mako-notifier libnotify-bin
 sudo apt install -y grim slurp
 
 # Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob
+sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob nala
 
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
@@ -75,10 +75,6 @@ printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.co
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 sudo mv -f yt-dlp /usr/bin/yt-dlp
-
-# Hacer scripts ejecutables
-chmod +x ~/.config/waybar/modules/*
-chmod +x ~/.local/bin/*
 
 # Crear carpetas del usuario
 xdg-user-dirs-update
