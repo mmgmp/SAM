@@ -79,9 +79,10 @@ sudo mv -f yt-dlp /usr/bin/yt-dlp
 # Crear carpetas del usuario
 xdg-user-dirs-update
 
-# Colocar historial de bash en .local
+# Colocar historial de bash en .local/state/bash
 mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
+source ~/.bashrc && rm ~/.bash_history
 
 # Desactivar archivo .sudo_as_admin_successful
 sudo printf 'Defaults !admin_flag' > /etc/sudoers.d/no_admin_flag
