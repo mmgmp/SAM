@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#===== INSTALACIÓN =====#
+
 # Instalar sway y complementos
 sudo apt install -y sway swayidle swaybg swaylock waybar xwayland tofi
 
@@ -55,37 +57,39 @@ cp UbuntuMono/Ubuntu*.ttf ~/.local/share/fonts
 # Actualizar cache de fuentes
 fc-cache -f -v
 
-# Montar USBs en /media
-mkdir -p /etc/udev/rules.d
-sudo printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > /etc/udev/rules.d/99-udisks2.rules
-
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
+
+# Descargar yt-dlp de github
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+sudo mv -f yt-dlp /usr/bin/yt-dlp
+
+#===== CONFIGURACIÓN =====#
 
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
 cp -r dotfiles/* ~/
 rm ~/LICENSE ~/README.md
 
-# Instalar y configurar pinentry-gnome3
-sudo apt install -y pinentry-gnome3
-mkdir -p ~/.local/share
-printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.conf
-
-# Descargar yt-dlp de github
-wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
-sudo mv -f yt-dlp /usr/bin/yt-dlp
-
-# Crear carpetas del usuario
-xdg-user-dirs-update
-
 # Colocar historial de bash en .local/state/bash
 mkdir -p ~/.local/state/bash
 touch ~/.local/state/bash/history
 source ~/.bashrc && rm ~/.bash_history
 
+# Montar USB en /media
+mkdir -p /etc/udev/rules.d
+sudo printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > /etc/udev/rules.d/99-udisks2.rules
+
 # Desactivar archivo .sudo_as_admin_successful
 sudo printf 'Defaults !admin_flag' > /etc/sudoers.d/no_admin_flag
+
+# Instalar y configurar pinentry-gnome3
+sudo apt install -y pinentry-gnome3
+mkdir -p ~/.local/share
+printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.conf
+
+# Crear carpetas del usuario
+xdg-user-dirs-update
 
 # Limpiar restos
 cd ~/
