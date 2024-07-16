@@ -31,7 +31,7 @@ sudo apt install -y mako-notifier libnotify-bin
 sudo apt install -y grim slurp
 
 # Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob nala
+sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob nala fonts-firacode
 
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
@@ -48,11 +48,6 @@ mkdir -p ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
 unzip FiraMono.zip -d FiraMono
 cp FiraMono/Fira*.otf ~/.local/share/fonts
-
-# Descargar UbuntuMono Nerd Font
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
-unzip UbuntuMono.zip -d UbuntuMono
-cp UbuntuMono/Ubuntu*.ttf ~/.local/share/fonts
 
 # Actualizar cache de fuentes
 fc-cache -f -v
