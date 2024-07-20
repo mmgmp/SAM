@@ -30,6 +30,15 @@ sudo apt install -y grim slurp
 # Programas adicionales
 sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob nala fonts-firacode
 
+# Instalar Ly (display manager)
+sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
+wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz
+tar -xvf zig-linux-x86_64-0.12.0.tar.xz
+git clone https://github.com/fairyglade/ly.git && cd ly
+sudo ~/SAM/zig-linux-x86_64-0.12.0/zig build installsystemd
+sudo systemctl enable ly.service
+cd ~/SAM
+
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
 systemctl --user --now enable wireplumber.service
