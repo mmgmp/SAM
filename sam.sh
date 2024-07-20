@@ -32,11 +32,9 @@ sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass
 
 # Instalar Ly (display manager)
 sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
-wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz
-tar -xvf zig-linux-x86_64-0.12.0.tar.xz
+wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz && tar -xvf zig-linux-x86_64-0.12.0.tar.xz
 git clone https://github.com/fairyglade/ly.git && cd ly
-sudo ~/SAM/zig-linux-x86_64-0.12.0/zig build installsystemd
-sudo systemctl enable ly.service
+sudo ~/SAM/zig-linux-x86_64-0.12.0/zig build installsystemd && sudo systemctl enable ly.service
 cd ~/SAM
 
 # Instalar PipeWire y activar audio
