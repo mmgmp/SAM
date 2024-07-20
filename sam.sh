@@ -67,8 +67,7 @@ sudo mv -f yt-dlp /usr/bin/yt-dlp
 
 # Colocar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
-cp -r dotfiles/* ~/
-rm ~/LICENSE ~/README.md
+cp -r dotfiles/{.bashrc,.profile,.config,.local} ~/
 
 # Colocar historial de bash en .local/state/bash
 mkdir -p ~/.local/state/bash
