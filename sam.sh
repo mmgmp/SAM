@@ -76,10 +76,10 @@ source ~/.bashrc && rm ~/.bash_history
 
 # Montar USB en /media
 mkdir -p /etc/udev/rules.d
-sudo printf 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' > /etc/udev/rules.d/99-udisks2.rules
+echo 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' | sudo tee /etc/udev/rules.d/99-udisks2.rules
 
 # Desactivar archivo .sudo_as_admin_successful
-sudo printf 'Defaults !admin_flag' > /etc/sudoers.d/no_admin_flag
+echo 'Defaults !admin_flag' | sudo tee /etc/sudoers.d/no_admin_flag
 
 # Instalar y configurar pinentry-gnome3
 sudo apt install -y pinentry-gnome3
