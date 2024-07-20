@@ -92,6 +92,6 @@ xdg-user-dirs-update
 
 # Limpiar restos
 cd ~/
-rm -r --interactive=never SAM/
+sudo rm -r --interactive=never SAM/
 
 printf "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
