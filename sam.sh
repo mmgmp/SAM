@@ -12,11 +12,7 @@ mv main.py autotiling && chmod +x autotiling
 sudo mv autotiling /usr/bin/autotiling
 
 # Instalar Ly (display manager)
-sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev
-wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz && tar -xvf zig-linux-x86_64-0.12.0.tar.xz
-git clone https://github.com/fairyglade/ly.git && cd ly
-sudo ~/SAM/zig-linux-x86_64-0.12.0/zig build installsystemd && sudo systemctl enable ly.service
-cd ~/SAM
+source /recursos/ly
 
 # Navegador web
 sudo apt install -y firefox-esr
