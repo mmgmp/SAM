@@ -51,6 +51,9 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 # Actualizar cache de fuentes
 fc-cache -f -v
 
+# Instalar nwg-look (lxappearance para wayland)
+source /resursos/nwg-look
+
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
 
