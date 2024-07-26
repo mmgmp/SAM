@@ -74,11 +74,11 @@ sudo mv -f yt-dlp /usr/bin/yt-dlp
 git clone https://github.com/mmgmp/dotfiles
 cp -r dotfiles/{.bashrc,.profile,.config,.local} ~/
 
-# Colocar historial de bash en .local/state/bash
+# Historial de bash en XDG
 mkdir -p ~/.local/state/bash && touch ~/.local/state/bash/history
 source ~/.bashrc && rm ~/.bash_history
 
-# Colocar archivos de nwg-look
+# Archivos de nwg-look en XDG
 mkdir -p ~/.config/gtk-2.0 && touch ~/.config/gtk-2.0/gtkrc
 mkdir -p ~/.local/share/icons
 
