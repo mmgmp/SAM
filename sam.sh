@@ -54,7 +54,7 @@ fc-cache -f -v
 # Instalar nwg-look (lxappearance para wayland)
 source /resursos/nwg-look
 
-# Instalar tema de Pop OS
+# Instalar tema de PopOS
 https://github.com/pop-os/gtk-theme/releases/download/v5.3.1/pop-gtk-theme_5.3.1_all.deb
 sudo apt install sudo apt install -f -y ~/SAM/pop-gtk-theme_5.3.1_all.deb
 
@@ -75,9 +75,12 @@ git clone https://github.com/mmgmp/dotfiles
 cp -r dotfiles/{.bashrc,.profile,.config,.local} ~/
 
 # Colocar historial de bash en .local/state/bash
-mkdir -p ~/.local/state/bash
-touch ~/.local/state/bash/history
+mkdir -p ~/.local/state/bash && touch ~/.local/state/bash/history
 source ~/.bashrc && rm ~/.bash_history
+
+# Colocar archivos de nwg-look
+mkdir -p ~/.config/gtk-2.0 && touch ~/.config/gtk-2.0/gtkrc
+mkdir -p ~/.local/share/icons
 
 # Montar USB en /media
 mkdir -p /etc/udev/rules.d
