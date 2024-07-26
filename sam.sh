@@ -82,6 +82,9 @@ source ~/.bashrc && rm ~/.bash_history
 mkdir -p ~/.config/gtk-2.0 && touch ~/.config/gtk-2.0/gtkrc
 mkdir -p ~/.local/share/icons
 
+# Configuracion de git en XDG
+mkdir -p ~/.config/git && touch ~/.config/git/config && rm ~/.gitconfig
+
 # Montar USB en /media
 mkdir -p /etc/udev/rules.d
 echo 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' | sudo tee /etc/udev/rules.d/99-udisks2.rules
