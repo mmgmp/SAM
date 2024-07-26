@@ -11,6 +11,9 @@ wget https://raw.githubusercontent.com/nwg-piotr/autotiling/master/autotiling/ma
 mv main.py autotiling && chmod +x autotiling
 sudo mv autotiling /usr/bin/autotiling
 
+# Instalar Ly (display manager)
+bash ~/SAM/recursos/ly
+
 # Navegador web
 sudo apt install -y firefox-esr
 
@@ -50,9 +53,6 @@ fc-cache -f -v
 
 # Instalar nwg-look (lxappearance para wayland)
 bash ~/SAM/recursos/nwg-look
-
-# Instalar Ly (display manager)
-bash ~/SAM/recursos/ly
 
 # Instalar tema de PopOS
 wget https://github.com/pop-os/gtk-theme/releases/download/v5.3.1/pop-gtk-theme_5.3.1_all.deb
