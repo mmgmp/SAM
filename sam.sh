@@ -12,7 +12,7 @@ mv main.py autotiling && chmod +x autotiling
 sudo mv autotiling /usr/bin/autotiling
 
 # Instalar Ly (display manager)
-source /recursos/ly
+bash ~/SAM/recursos/ly
 
 # Navegador web
 sudo apt install -y firefox-esr
@@ -52,7 +52,7 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f -v
 
 # Instalar nwg-look (lxappearance para wayland)
-source /recursos/nwg-look
+bash ~/SAM/recursos/nwg-look
 
 # Instalar tema de PopOS
 wget https://github.com/pop-os/gtk-theme/releases/download/v5.3.1/pop-gtk-theme_5.3.1_all.deb
