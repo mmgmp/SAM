@@ -54,6 +54,13 @@ fc-cache -f -v
 # Instalar nwg-look (lxappearance para wayland)
 source /resursos/nwg-look
 
+# Instalar tema de Pop OS
+https://github.com/pop-os/gtk-theme/releases/download/v5.3.1/pop-gtk-theme_5.3.1_all.deb
+sudo apt install sudo apt install -f -y ~/SAM/pop-gtk-theme_5.3.1_all.deb
+
+# Instalar tema del cursor e iconos
+sudo apt install -y breeze-cursor-theme papirus-icon-theme
+
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
 
