@@ -52,7 +52,7 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f -v
 
 # Instalar nwg-look (lxappearance para wayland)
-source /resursos/nwg-look
+source /recursos/nwg-look
 
 # Instalar tema de PopOS
 wget https://github.com/pop-os/gtk-theme/releases/download/v5.3.1/pop-gtk-theme_5.3.1_all.deb
