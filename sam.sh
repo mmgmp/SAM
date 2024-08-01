@@ -100,8 +100,4 @@ printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.co
 # Crear carpetas del usuario
 xdg-user-dirs-update
 
-# Limpiar restos
-cd ~/
-sudo rm -r --interactive=never SAM/
-
 printf "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
