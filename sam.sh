@@ -91,6 +91,7 @@ echo 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}
 
 # Desactivar archivo .sudo_as_admin_successful
 echo 'Defaults !admin_flag' | sudo tee /etc/sudoers.d/no_admin_flag
+rm ~/.sudo_as_admin_successful
 
 # Instalar y configurar pinentry-gnome3
 sudo apt install -y pinentry-gnome3
