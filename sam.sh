@@ -11,25 +11,11 @@ wget https://raw.githubusercontent.com/nwg-piotr/autotiling/master/autotiling/ma
 mv main.py autotiling && chmod +x autotiling
 sudo mv autotiling /usr/bin/autotiling
 
+# Instalar herramientas para compilar
+sudo apt install -y build-essential make
+
 # Instalar Ly (display manager)
-# Instalar dependencias
-sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev > /dev/null
-
-# Descargar zig 0.12.0
-wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz > /dev/null
-tar -xvf zig-linux-x86_64-0.12.0.tar.xz > /dev/null
-
-# Descargar ly 1.0.0
-wget https://github.com/fairyglade/ly/archive/refs/tags/v1.0.0.zip > /dev/null
-unzip v1.0.0.zip > /dev/null
-cd ly-1.0.0
-
-# Compilar y activar servicio de systemd
-export PATH=$PATH:~/SAM/zig-linux-x86_64-0.12.0
-sudo zig build installsystemd 
-sudo systemctl enable ly.service
-
-cd ~/SAM
+bash ~/SAM/recursos/ly
 
 # Navegador web
 sudo apt install -y firefox-esr
