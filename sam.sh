@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ~/
-
 #===== INSTALACIÓN =====#
 
 # Instalar sway y complementos
