@@ -8,11 +8,12 @@ wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz
 tar -xvf zig-linux-x86_64-0.12.0.tar.xz > /dev/null
 
 # Descargar ly
-git clone https://github.com/fairyglade/ly && cd ly
+wget https://github.com/fairyglade/ly/archive/refs/tags/v1.0.2.zip
+unzip v1.0.2.zip
+cd ly-v1.0.2
 
 # Compilar y activar servicio de systemd
-export PATH=$PATH:~/SAM/zig-linux-x86_64-0.12.0
-sudo zig build installsystemd 
+sudo ~/SAM/zig-linux-x86_64-0.12.0/zig build installsystemd 
 sudo systemctl enable ly.service
 
 cd ~/SAM
