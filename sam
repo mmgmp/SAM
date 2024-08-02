@@ -105,7 +105,8 @@ printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.co
 xdg-user-dirs-update
 
 # Limpiar restos
-cd ~/
+cd ..
 sudo rm -r --interactive=never SAM/
+sudo rm -r --interactive=never go/
 
 printf "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
