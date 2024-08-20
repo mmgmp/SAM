@@ -65,6 +65,7 @@ curl -sS https://starship.rs/install.sh | sh
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+chmod +x yt-dlp
 sudo mv -f yt-dlp /usr/bin/yt-dlp
 
 #===== CONFIGURACIÓN =====#
