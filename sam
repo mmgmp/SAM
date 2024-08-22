@@ -36,7 +36,7 @@ sudo apt install -y grim slurp
 sudo apt install -y policykit-1-gnome
 
 # Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob nala fonts-firacode fzf calcurse
+sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gnome-disk-utility gh wob nala fonts-firacode fzf calcurse
 
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
