@@ -20,9 +20,6 @@ bash ~/SAM/recursos/ly
 # Navegador web
 sudo apt install -y firefox-esr
 
-# Gestor de archivos
-sudo apt install -y lf
-
 # Multimedia
 sudo apt install -y mpv brightnessctl swayimg zathura zathura-pdf-poppler gammastep
 
@@ -65,6 +62,11 @@ sudo apt install -y breeze-cursor-theme papirus-icon-theme arc-theme
 
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
+
+# Descargar versión de lf mas reciente
+wget https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz
+tar -xvf lf-linux-amd64.tar.gz
+sudo mv lf /usr/bin/lf
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
