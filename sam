@@ -82,6 +82,18 @@ else
     echo "No se instalará auto-cpufreq."
 fi
 
+# Preguntar si quieres instalar plymouth
+plymouth="n"
+read -p "¿Quieres instalar plymouth? (s/N): " plymouth
+if [ "$plymouth" = "s" ] || [ "$plymouth" = "S" ]; then
+	sudo apt install -y plymouth plymouth-themes
+	sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"/' /etc/default/grub
+	sudo update-grub2
+	sudo plymouth-set-default-theme -R spinner
+else
+	echo "No se instalará plymouth."
+fi
+
 #===== CONFIGURACIÓN =====#
 
 # Colocar mis dotfiles
