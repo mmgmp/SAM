@@ -14,9 +14,6 @@ sudo mv autotiling /usr/bin/autotiling
 # Instalar herramientas para compilar
 sudo apt install -y build-essential make
 
-# Instalar Ly (display manager)
-bash ~/SAM/recursos/ly
-
 # Navegador web
 sudo apt install -y firefox-esr
 
@@ -54,14 +51,14 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 # Actualizar cache de fuentes
 fc-cache -f -v
 
+# Instalar Ly (display manager)
+bash ~/SAM/recursos/ly
+
 # Instalar nwg-look (lxappearance para wayland)
 bash ~/SAM/recursos/nwg-look
 
 # Instalar tema del cursor, iconos y GTK
 sudo apt install -y breeze-cursor-theme papirus-icon-theme arc-theme
-
-# Instalar Starship prompt
-curl -sS https://starship.rs/install.sh | sh
 
 # Descargar versión de lf mas reciente
 wget https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz
@@ -72,6 +69,18 @@ sudo mv lf /usr/bin/lf
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 chmod +x yt-dlp
 sudo mv -f yt-dlp /usr/bin/yt-dlp
+
+# Instalar Starship prompt
+curl -sS https://starship.rs/install.sh | sh
+
+# Preguntar si quieres instalar auto-cpufreq
+auto_cpufreq="n"
+read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
+if [ "$auto_cpufreq" = "s" ] || [ "$auto_cpufreq" = "S" ]; then
+    bash ~/SAM/recursos/auto-cpufreq
+else
+    echo "No se instalará auto-cpufreq."
+fi
 
 #===== CONFIGURACIÓN =====#
 
