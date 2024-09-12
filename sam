@@ -74,7 +74,6 @@ sudo mv -f yt-dlp /usr/bin/yt-dlp
 curl -sS https://starship.rs/install.sh | sh
 
 # Preguntar si quieres instalar auto-cpufreq
-auto_cpufreq="n"
 read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
 if [ "$auto_cpufreq" = "s" ] || [ "$auto_cpufreq" = "S" ]; then
     bash ~/SAM/recursos/auto-cpufreq
@@ -83,7 +82,6 @@ else
 fi
 
 # Preguntar si quieres instalar plymouth
-plymouth="n"
 read -p "¿Quieres instalar plymouth? (s/N): " plymouth
 if [ "$plymouth" = "s" ] || [ "$plymouth" = "S" ]; then
 	sudo apt install -y plymouth plymouth-themes
