@@ -27,7 +27,7 @@ sudo apt install -y mako-notifier libnotify-bin
 sudo apt install -y grim slurp
 
 # Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob nala fonts-firacode fzf calcurse chafa trash-cli
+sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh wob nala fonts-firacode fzf calcurse chafa trash-cli jk
 
 # PolicyKit
 sudo apt install -y lxpolkit
