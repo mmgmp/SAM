@@ -33,7 +33,7 @@ sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass
 sudo apt install -y lxpolkit
 
 # Instalar PipeWire y activar audio
-sudo apt install -y pipewire pulseaudio-utils pavucontrol
+sudo apt install -y pipewire wireplumber pavucontrol
 systemctl --user --now enable wireplumber.service
 
 # Portales para sway (compartir pantalla)
