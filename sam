@@ -36,6 +36,9 @@ sudo apt install -y lxpolkit
 sudo apt install -y pipewire pulseaudio-utils pavucontrol
 systemctl --user --now enable wireplumber.service
 
+# Portales para sway (compartir pantalla)
+sudo apt install -y xdg-desktop-portal-wlr
+
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
