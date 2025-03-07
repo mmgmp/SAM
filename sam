@@ -3,7 +3,7 @@
 #===== INSTALACIÓN =====#
 
 # Instalar sway y complementos
-sudo apt install -y sway swayidle swaybg swaylock waybar xwayland tofi
+sudo apt install -y sway swayidle swaybg swaylock waybar xwayland tofi xdg-desktop-portal-wlr
 
 # Sway autotiling
 sudo apt install -y python3-i3ipc
@@ -35,9 +35,6 @@ sudo apt install -y lxpolkit
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire wireplumber pavucontrol
 systemctl --user --now enable wireplumber.service
-
-# Portales para sway (compartir pantalla)
-sudo apt install -y xdg-desktop-portal-wlr
 
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
