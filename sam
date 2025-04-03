@@ -32,6 +32,9 @@ sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass
 # PolicyKit
 sudo apt install -y lxpolkit
 
+# Instalar pinentry-gnome3
+sudo apt install -y pinentry-gnome3
+
 # Instalar PipeWire y activar audio
 sudo apt install -y pipewire wireplumber pavucontrol
 systemctl --user --now enable wireplumber.service
@@ -130,11 +133,6 @@ echo 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}
 # Desactivar archivo .sudo_as_admin_successful
 echo 'Defaults !admin_flag' | sudo tee /etc/sudoers.d/no_admin_flag
 rm ~/.sudo_as_admin_successful
-
-# Instalar y configurar pinentry-gnome3
-sudo apt install -y pinentry-gnome3
-mkdir -p ~/.local/share
-printf 'pinentry-program /usr/bin/pinentry-gnome3' > ~/.local/share/gpg-agent.conf
 
 # Crear carpetas del usuario
 xdg-user-dirs-update
