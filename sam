@@ -57,9 +57,6 @@ fc-cache -f -v
 # Instalar Ly (display manager)
 bash ~/SAM/recursos/ly
 
-# Instalar nwg-look (lxappearance para wayland)
-bash ~/SAM/recursos/nwg-look
-
 # Instalar tema del cursor, iconos y GTK
 sudo apt install -y breeze-cursor-theme papirus-icon-theme arc-theme
 
