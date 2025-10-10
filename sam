@@ -5,18 +5,6 @@
 pkgs_list="recursos/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ')
 
-# Instalar herramientas para compilar
-sudo apt install -y build-essential make
-
-# Navegador web
-sudo apt install -y firefox-esr
-
-# Multimedia
-sudo apt install -y mpv brightnessctl swayimg zathura zathura-pdf-poppler gammastep
-
-# Notificaciones
-sudo apt install -y mako-notifier libnotify-bin
-
 # Captura de pantalla
 sudo apt install -y grim slurp
 
