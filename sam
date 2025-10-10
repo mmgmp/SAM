@@ -2,7 +2,7 @@
 
 #===== INSTALACIÓN =====#
 
-pkgs-list="./recursos/paquetes"
+pkgs-list="recursos/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs-list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ')
 
 # Instalar sway y complementos
