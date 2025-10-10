@@ -52,8 +52,8 @@ udisks2
 gh
 fzf
 calcurse
-chafa
-poppler-utils
+chafa # visualizar imágenes en lf.
+poppler-utils # visualizar pdfs en lf.
 trash-cli
 jq
 grim
