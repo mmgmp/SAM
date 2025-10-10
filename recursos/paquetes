@@ -2,6 +2,7 @@
 
 #===== SWAY Y COMPONENTES =====#
 sway
+autotiling
 swayidle
 swaybg
 swaylock
