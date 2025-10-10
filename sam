@@ -2,8 +2,8 @@
 
 #===== INSTALACIÓN =====#
 
-pkgs-list="recursos/paquetes"
-sudo apt install -y $(grep -vE '^\s*#' "$pkgs-list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ')
+pkgs_list="recursos/paquetes"
+sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ')
 
 # Instalar sway y complementos
 sudo apt install -y sway swayidle swaybg swaylock waybar xwayland tofi xdg-desktop-portal-wlr
