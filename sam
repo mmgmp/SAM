@@ -29,11 +29,6 @@ fc-cache -f -v
 # Instalar Ly (display manager)
 bash ~/SAM/recursos/ly
 
-# Descargar versión de lf mas reciente
-wget https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz
-tar -xvf lf-linux-amd64.tar.gz
-sudo mv lf /usr/bin/lf
-
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 chmod +x yt-dlp
