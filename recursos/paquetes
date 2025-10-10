@@ -22,3 +22,38 @@ gammastep
 #===== NOTIFICACIONES =====#
 mako-notifier
 libnotify-bi
+
+#===== SONIDO =====#
+pipewire
+wireplumber
+pavucontrol
+
+#===== APARIENCIA =====#
+arc-theme
+papirus-icon-theme
+reeze-cursor-theme
+
+#===== ADICIONALES =====#
+zip
+unzip
+unrar-free
+7zip
+curl
+network-manager
+newsboat
+pass
+pass-otp
+neovim
+abook
+htop
+udisks2
+gh
+fonts-firacode
+fzf
+calcurse
+chafa
+poppler-utils
+trash-cli
+jq
+grim
+slurp
