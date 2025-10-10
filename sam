@@ -5,15 +5,6 @@
 pkgs_list="recursos/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ')
 
-# Instalar sway y complementos
-sudo apt install -y sway swayidle swaybg swaylock waybar xwayland tofi xdg-desktop-portal-wlr
-
-# Sway autotiling
-sudo apt install -y python3-i3ipc
-wget https://raw.githubusercontent.com/nwg-piotr/autotiling/master/autotiling/main.py
-mv main.py autotiling && chmod +x autotiling
-sudo mv autotiling /usr/bin/autotiling
-
 # Instalar herramientas para compilar
 sudo apt install -y build-essential make
 
