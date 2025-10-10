@@ -10,3 +10,15 @@ waybar
 xwayland
 tofi
 xdg-desktop-portal-wlr
+
+#===== MULTIMEDIA =====#
+mpv
+brightnessctl
+swayimg
+zathura
+zathura-pdf-poppler
+gammastep
+
+#===== NOTIFICACIONES =====#
+mako-notifier
+libnotify-bi
