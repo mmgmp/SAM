@@ -5,21 +5,11 @@
 pkgs_list="recursos/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ')
 
-# Captura de pantalla
-sudo apt install -y grim slurp
-
-# Programas adicionales
-sudo apt install -y unzip zip unrar-free 7zip curl network-manager newsboat pass pass-otp neovim abook htop bash-completion udisks2 gh nala fonts-firacode fzf calcurse chafa trash-cli jq poppler-utils
-
 # PolicyKit
 sudo apt install -y lxpolkit
 
 # Instalar pinentry-gnome3
 sudo apt install -y pinentry-gnome3
-
-# Instalar PipeWire y activar audio
-sudo apt install -y pipewire wireplumber pavucontrol
-systemctl --user --now enable wireplumber.service
 
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
