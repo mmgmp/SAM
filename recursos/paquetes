@@ -1,1 +1,11 @@
+# Listado de todos los paquetes que de instalan al ejecutar el programa.
 
+#===== SWAY Y COMPONENTES =====#
+sway
+swayidle
+swaybg
+swaylock
+waybar
+xwayland
+tofi
+xdg-desktop-portal-wlr
