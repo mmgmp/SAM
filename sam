@@ -3,7 +3,7 @@
 #===== INSTALACIÓN =====#
 
 pkgs_list="recursos/paquetes"
-sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ')
+sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
 
 # PolicyKit
 sudo apt install -y lxpolkit
