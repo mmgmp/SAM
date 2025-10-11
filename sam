@@ -5,12 +5,6 @@
 pkgs_list="recursos/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
 
-# PolicyKit
-sudo apt install -y lxpolkit
-
-# Instalar pinentry-gnome3
-sudo apt install -y pinentry-gnome3
-
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
