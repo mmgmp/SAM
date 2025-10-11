@@ -58,3 +58,7 @@ trash-cli
 jq
 grim
 slurp
+
+#===== GRUB =====#
+plymouth
+plymouth-themes
