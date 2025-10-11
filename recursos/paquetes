@@ -60,6 +60,8 @@ trash-cli
 jq
 grim
 slurp
+lxpolkit
+pinentry-gnome3
 
 #===== GRUB =====#
 plymouth
