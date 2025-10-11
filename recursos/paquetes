@@ -21,7 +21,7 @@ gammastep
 
 #===== NOTIFICACIONES =====#
 mako-notifier
-libnotify-bi
+libnotify-bin
 
 #===== SONIDO =====#
 pipewire
