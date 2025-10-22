@@ -9,7 +9,7 @@ tar -xvf zig-x86_64-linux-0.15.2.tar.xz > /dev/null
 
 # Descargar ly
 wget https://codeberg.org/fairyglade/ly/archive/v1.2.0.zip
-unzip v1.2.0.zip
+unzip v1.2.0.zip > /dev/null
 cd ly
 
 # Compilar y activar servicio de systemd
