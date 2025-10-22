@@ -25,7 +25,7 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f -v
 
 # Instalar Ly (display manager)
-bash ~/SAM/recursos/ly
+bash ~/SAM/recursos/scripts/ly
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
