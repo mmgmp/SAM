@@ -39,10 +39,7 @@ nwg-look
 #===== ADICIONALES =====#
 nala
 lf
-zip
-unzip
-unrar-free
-7zip
+p7zip-full # sustituye a las demás herramientas de compresión.
 curl
 network-manager
 fastfetch
