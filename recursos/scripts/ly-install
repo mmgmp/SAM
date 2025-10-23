@@ -6,7 +6,7 @@ sudo nala install -y build-essential libpam0g-dev libxcb-xkb-dev xauth xserver-x
 # Descargar ziglang
 wget https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz
 7z a zig-x86_64-linux-0.15.2.tar.xz
-7z a zig-x86_64-linux-0.15.2.tar -oziglang
+7z a zig-x86_64-linux-0.15.2.tar
 
 # Descargar ly
 wget https://codeberg.org/fairyglade/ly/archive/v1.2.0.zip
@@ -14,7 +14,7 @@ wget https://codeberg.org/fairyglade/ly/archive/v1.2.0.zip
 cd ly
 
 # Compilar y activar servicio de systemd
-sudo ~/SAM/ziglang/zig build installexe 
+sudo ~/SAM/zig-x86_64-linux-0.15.2/zig build installexe 
 sudo systemctl enable ly.service
 
 cd ~/SAM
