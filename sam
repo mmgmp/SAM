@@ -18,7 +18,7 @@ mkdir -p ~/.local/share/fonts
 
 # Descargar FiraMono Nerd Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
-unzip FiraMono.zip -d FiraMono
+7z x FiraMono.zip -oFiraMono
 cp FiraMono/Fira*.otf ~/.local/share/fonts
 
 # Actualizar cache de fuentes
