@@ -5,8 +5,8 @@ sudo nala install -y build-essential libpam0g-dev libxcb-xkb-dev xauth xserver-x
 
 # Descargar ziglang
 wget https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz
-7z a zig-x86_64-linux-0.15.2.tar.xz
-7z a zig-x86_64-linux-0.15.2.tar
+7z x zig-x86_64-linux-0.15.2.tar.xz
+7z x zig-x86_64-linux-0.15.2.tar
 
 # Descargar ly
 wget https://codeberg.org/fairyglade/ly/archive/v1.2.0.zip
