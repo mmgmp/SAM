@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Descarga e instala auto-cpufreq
-git clone https://github.com/AdnanHodzic/auto-cpufreq.git
-cd auto-cpufreq && sudo ./auto-cpufreq-installer
+wget https://github.com/AdnanHodzic/auto-cpufreq/archive/refs/tags/v2.6.0.zip
+7z x auto-cpufreq-2.6.0.zip && cd auto-cpufreq
+sudo ./auto-cpufreq-installer
 sudo auto-cpufreq --install
