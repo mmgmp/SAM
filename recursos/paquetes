@@ -37,7 +37,6 @@ fonts-firacode
 nwg-look
 
 #===== ADICIONALES =====#
-nala
 lf
 p7zip-full # sustituye a las demás herramientas de compresión.
 curl
