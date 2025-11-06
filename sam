@@ -22,7 +22,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.z
 cp FiraMono/Fira*.otf ~/.local/share/fonts
 
 # Actualizar cache de fuentes
-fc-cache -f -v
+fc-cache -f
 
 # Instalar Ly (display manager)
 bash ~/SAM/res/scripts/ly-install
