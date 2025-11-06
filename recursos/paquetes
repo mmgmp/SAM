@@ -59,6 +59,7 @@ grim
 slurp
 lxpolkit
 pinentry-gnome3
+transmission
 
 #===== GRUB =====#
 plymouth
