@@ -60,6 +60,7 @@ slurp
 lxpolkit
 pinentry-gnome3
 transmission
+gnome-keyring
 
 #===== GRUB =====#
 plymouth
