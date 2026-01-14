@@ -41,7 +41,6 @@ p7zip-full # sustituye a las demás herramientas de compresión.
 curl
 network-manager
 fastfetch
-newsboat
 pass
 pass-otp
 neovim
