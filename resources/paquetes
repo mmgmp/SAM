@@ -26,6 +26,7 @@ nwg-look
 
 #===== ADICIONALES =====#
 lf
+network-manager-applet
 p7zip-full # sustituye a las demás herramientas de compresión.
 curl
 network-manager
