@@ -2,6 +2,16 @@
 
 #===== INSTALACIÓN =====#
 
+echo "Introduce el numero del entorno que quieres instalar."
+read -p "[1] Sway - [2] niri ❯ " SETUP
+
+case "$SETUP" in
+	"1") bash ./resources/wm/sway-setup.sh || exit 1
+	;;
+	"2") bash ./resources/wm/niri-setup.sh || exit 1
+	;;
+esac
+
 # Paquetes de los repositorios oficiales
 pkgs_list="res/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
