@@ -10,8 +10,7 @@ wget https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz
 
 # Descargar ly
 wget https://codeberg.org/fairyglade/ly/archive/v1.2.0.zip
-7z x v1.2.0.zip
-cd ly
+7z x v1.2.0.zip && cd ly
 
 # Compilar y activar servicio de systemd
 sudo ~/SAM/zig-x86_64-linux-0.15.2/zig build installexe 
