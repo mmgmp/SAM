@@ -1,16 +1,5 @@
 # Listado de todos los paquetes que de instalan al ejecutar el programa.
 
-#===== SWAY Y COMPONENTES =====#
-sway
-autotiling
-swayidle
-swaybg
-swaylock
-waybar
-xwayland
-tofi
-xdg-desktop-portal-wlr
-
 #===== MULTIMEDIA =====#
 mpv
 brightnessctl
@@ -49,7 +38,6 @@ htop
 udisks2
 gh
 fzf
-calcurse
 chafa # visualizar imágenes en lf.
 poppler-utils # visualizar pdfs en lf.
 trash-cli
