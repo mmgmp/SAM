@@ -2,19 +2,16 @@
 
 #===== INSTALACIÓN =====#
 
-# Instalar nala
-sudo apt install -y nala
-
 # Paquetes de los repositorios oficiales
 pkgs_list="res/paquetes"
-sudo nala install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
+sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
 
 # Instalar flatpak y añadir flathub.com
-sudo nala install -y flatpak
+sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Crear carpetas para fuentes
-mkdir -p ~/.local/share/fonts
+[ -d ~/.local/share/fonts ] || mkdir -p ~/.local/share/fonts
 
 # Descargar FiraMono Nerd Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
@@ -25,7 +22,7 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f
 
 # Instalar Ly (display manager)
-bash ~/SAM/res/scripts/ly-install
+bash ~/SAM/resources/standalone/ly-install.sh
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
@@ -33,7 +30,7 @@ chmod +x yt-dlp
 sudo mv -f yt-dlp /usr/bin/yt-dlp
 
 # Instalar Starship prompt
-curl -sS https://starship.rs/install.sh | sh
+#curl -sS https://starship.rs/install.sh | sh
 
 # Preguntar si quieres instalar auto-cpufreq
 read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
