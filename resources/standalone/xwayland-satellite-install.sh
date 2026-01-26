@@ -1,13 +1,21 @@
 #!/bin/bash
 
-# Instalar dependencias
-sudo apt install -y Xwayland clang libxcb-cursor-dev libxcb1-dev
+# Comprobar si las herramientas están instaladas
+[ -f /usr/bin/7z ] || sudo apt install -y p7zip-full
+[ -f /usr/bin/cargo ] || sudo apt install -y cargo
 
-# Descvargar xwayland-satellite
+# Instalar dependencias
+sudo apt install -y xwayland clang libxcb-cursor-dev libxcb1-dev
+
+# Descargar xwayland-satellite
 wget https://github.com/Supreeeme/xwayland-satellite/archive/refs/tags/v0.8.zip
 
 # Compilar xwayland-satellite
-7z x v0.8.zip ; cd xwayland-satellite-0.8
+7z x v0.8.zip && cd xwayland-satellite-0.8
 cargo build --release -F systemd
+
+# Mover los archivos
+sudo cp target/release/xwayland-satellite /usr/bin/
+sudo cp resources/xwayland-satellite.service /etc/systemd/user/
 
 cd ..
