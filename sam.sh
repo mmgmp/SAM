@@ -8,7 +8,7 @@ read -p "[1] Sway - [2] niri ❯ " SETUP
 case "$SETUP" in
 	"1") bash ./resources/wm/sway-setup.sh || exit 1
 	;;
-	"2") bash ./resources/wm/niri-setup.sh || exit 1
+	"2") bash ./resources/wm/niri-setup.sh && bash ./resources/standalone/xwayland-satellite-install.sh || exit 1
 	;;
 esac
 
@@ -32,7 +32,7 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f
 
 # Instalar Ly (display manager)
-bash ~/SAM/resources/standalone/ly-install.sh
+bash ./resources/standalone/ly-install.sh
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
