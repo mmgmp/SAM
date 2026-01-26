@@ -6,4 +6,4 @@ wget https://github.com/AdnanHodzic/auto-cpufreq/archive/refs/tags/v2.6.0.zip
 sudo ./auto-cpufreq-installer
 sudo auto-cpufreq --install
 
-cd ~/SAM
+cd ..
