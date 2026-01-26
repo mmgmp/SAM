@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Comprobar si las herramientas están instaladas
+[ -f /usr/bin/7z ] || sudo apt install -y p7zip-full
+
 # Instalar dependencias
 sudo apt install -y build-essential libpam0g-dev libxcb-xkb-dev xauth xserver-xorg brightnessctl
 
