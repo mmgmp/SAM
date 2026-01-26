@@ -27,7 +27,7 @@ sudo cp resources/niri.service /etc/systemd/user/
 sudo cp resources/niri-shutdown.target /etc/systemd/user/
 
 # Herramientas de escritorio
-sudo apt install -y mako waybar swaylock swayidle swaybg
+sudo apt install -y waybar swaylock swayidle swaybg
 
 # Portales
 sudo apt install -y xdg-desktop-portal-gtk gnome-keyring
