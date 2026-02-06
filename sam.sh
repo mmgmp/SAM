@@ -16,6 +16,18 @@ esac
 pkgs_list="res/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
 
+# Navegadores web
+echo -e "\nElige el navegador web (separar varios con espacios):"
+echo -e " 1) Brave\n 2) Firefox-esr\n"
+read -p "Selección/es (Enter para saltar): " browser_choices
+
+for choice in $browser_choices; do
+	case $choice in
+		1) curl -fsS https://dl.brave.com/install.sh | sh ;;
+        2) sudo apt install -y firefox-esr ;;
+    esac
+done
+
 # Instalar flatpak y añadir flathub.com
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
