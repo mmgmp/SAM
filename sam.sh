@@ -83,10 +83,6 @@ rm ~/.sudo_as_admin_successful
 mkdir -p ~/.local/state/bash && touch ~/.local/state/bash/history
 source ~/.bashrc && rm ~/.bash_history
 
-# Archivos de nwg-look en XDG
-mkdir -p ~/.config/gtk-2.0 && touch ~/.config/gtk-2.0/gtkrc
-mkdir -p ~/.local/share/icons
-
 # Configuracion de git en XDG
 mkdir -p ~/.config/git && touch ~/.config/git/config && rm ~/.gitconfig
 
