@@ -33,7 +33,4 @@ sudo apt install -y waybar swaylock swayidle swaybg
 sudo apt install -y xdg-desktop-portal-gtk gnome-keyring
 sudo apt install --no-install-recommends -y xdg-desktop-portal-gnome
 
-# Aplicaciones GTk oscuras
-dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
-
 cd ..

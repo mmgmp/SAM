@@ -33,6 +33,9 @@ done
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+# Aplicaciones GTk4 oscuras
+dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
+
 # Crear carpetas para fuentes
 [ -d ~/.local/share/fonts ] || mkdir -p ~/.local/share/fonts
 
