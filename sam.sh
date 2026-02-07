@@ -29,7 +29,7 @@ for choice in $browser_choices; do
     esac
 done
 
-# Instalar flatpak y añadir flathub.com
+# Flatpak
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
@@ -101,4 +101,4 @@ xdg-user-dirs-update
 git clone https://github.com/mmgmp/dotfiles
 cp -r dotfiles/{.bashrc,.profile,.config,.local} ~/
 
-printf "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
+echo -e "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
