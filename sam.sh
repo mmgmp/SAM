@@ -58,6 +58,7 @@ sudo mv -f yt-dlp /usr/bin/yt-dlp
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
 sudo mv /usr/local/bin/starship /usr/bin/
+starship preset plain-text-symbols -o ~/.config/starship.toml
 
 # Preguntar si quieres instalar auto-cpufreq
 read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
