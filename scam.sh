@@ -84,6 +84,10 @@ sudo update-grub
 echo 'Defaults !admin_flag' | sudo tee /etc/sudoers.d/no_admin_flag
 rm ~/.sudo_as_admin_successful
 
+# Montar USB en /media con udisks2
+[ -d /etc/udev/rules.d/ ] || mkdir -p /etc/udev/rules.d/
+echo 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' | sudo tee /etc/udev/rules.d/99-udisks2.rules
+
 # Historial de bash en XDG
 mkdir -p ~/.local/state/bash && touch ~/.local/state/bash/history
 source ~/.bashrc && rm ~/.bash_history
