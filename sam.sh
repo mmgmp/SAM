@@ -14,7 +14,7 @@ for choice in $desktop_choices; do
 done
 
 # Paquetes de los repositorios oficiales
-pkgs_list="res/paquetes"
+pkgs_list="res/pkgs"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
 
 # Navegador web
