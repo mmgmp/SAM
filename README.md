@@ -1,4 +1,4 @@
-# (S.A.M.) Script de Autoconfiguración de Marcos
+# (S.C.A.M.) Script de Configuración Automática de Marcos
 
 Un script para Debian 13 que ofrece una replica mi escritorio, pensado para el que quiera una experiencia "window manager" en Wayland.
 
