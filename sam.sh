@@ -8,13 +8,13 @@ read -p "Selección/es (Enter para saltar): " desktop_choices
 
 for choice in $desktop_choices; do
 	case $choice in
-		1) bash ./resources/wm/sway-setup.sh || exit 1 ;;
-        2) bash ./resources/wm/niri-setup.sh && bash ./resources/standalone/xwayland-satellite-install.sh || exit 1 ;;
+		1) bash ./ress/wm/sway-setup.sh || exit 1 ;;
+        2) bash ./res/wm/niri-setup.sh && bash ./res/standalone/xwayland-satellite-install.sh || exit 1 ;;
     esac
 done
 
 # Paquetes de los repositorios oficiales
-pkgs_list="resources/paquetes"
+pkgs_list="res/paquetes"
 sudo apt install -y $(grep -vE '^\s*#' "$pkgs_list" | grep -vE '^\s*$' | sed 's/#.*//' | awk '{$1=$1};1' | tr '\n' ' ') || exit 1
 
 # Navegador web
@@ -48,7 +48,7 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f
 
 # Instalar Ly (display manager)
-bash ./resources/standalone/ly-install.sh
+bash ./res/standalone/ly-install.sh
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
