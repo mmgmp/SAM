@@ -63,7 +63,7 @@ starship preset plain-text-symbols -o ~/.config/starship.toml
 # Preguntar si quieres instalar auto-cpufreq
 read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
 if [ "$auto_cpufreq" = "s" ] || [ "$auto_cpufreq" = "S" ]; then
-    bash ~/SAM/res/auto-cpufreq.sh
+    bash ./res/auto-cpufreq.sh
 else
     echo "No se instalará auto-cpufreq."
 fi
