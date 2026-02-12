@@ -98,8 +98,12 @@ mkdir -p ~/.config/git && touch ~/.config/git/config && rm ~/.gitconfig
 # Crear carpetas del usuario
 xdg-user-dirs-update
 
-# Colocar mis dotfiles
+# Instalar mis dotfiles
 git clone https://github.com/mmgmp/dotfiles
 cp -r dotfiles/{.bashrc,.profile,.config,.local} ~/
+
+# Instalar mis scripts
+git clone https://github.com/mmgmp/scrips
+cp -r scripts/menus/* scripts/notifications/* scripts/user-tools/* ~/
 
 echo -e "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
