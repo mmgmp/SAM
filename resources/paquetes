@@ -25,7 +25,8 @@ fonts-firacode
 
 #===== ADICIONALES =====#
 lf
-network-manager-applet
+udisks2
+udiskie
 p7zip-full # sustituye a las demás herramientas de compresión.
 curl
 network-manager
