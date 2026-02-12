@@ -8,8 +8,8 @@ read -p "Selección/es (Enter para saltar): " desktop_choices
 
 for choice in $desktop_choices; do
 	case $choice in
-		1) bash ./ress/wm/sway-setup.sh || exit 1 ;;
-        2) bash ./res/wm/niri-setup.sh && bash ./res/standalone/xwayland-satellite-install.sh || exit 1 ;;
+		1) bash ./ress/wm/sway.sh || exit 1 ;;
+        2) bash ./res/wm/niri.sh && bash ./res/standalone/xwayland-satellite.sh || exit 1 ;;
     esac
 done
 
@@ -48,7 +48,7 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f
 
 # Instalar Ly (display manager)
-bash ./res/standalone/ly-install.sh
+bash ./res/standalone/ly.sh
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
@@ -63,7 +63,7 @@ starship preset plain-text-symbols -o ~/.config/starship.toml
 # Preguntar si quieres instalar auto-cpufreq
 read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
 if [ "$auto_cpufreq" = "s" ] || [ "$auto_cpufreq" = "S" ]; then
-    bash ~/SAM/res/auto-cpufreq
+    bash ~/SAM/res/auto-cpufreq.sh
 else
     echo "No se instalará auto-cpufreq."
 fi
