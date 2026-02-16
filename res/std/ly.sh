@@ -1,5 +1,9 @@
 #!/bin/bash
 
+red() {
+    echo -e "\033[0;31m$1\033[0m"
+}
+
 # Comprobar si las herramientas están instaladas
 [ -f /usr/bin/7z ] || sudo apt install -y p7zip-full
 
@@ -11,10 +15,16 @@ wget https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz
 7z x zig-x86_64-linux-0.15.2.tar.xz
 7z x zig-x86_64-linux-0.15.2.tar
 
-# Descargar ly
-VERSION="1.3.2"
-wget https://codeberg.org/fairyglade/ly/archive/v${VERSION}.zip
-7z x v${VERSION}.zip && cd ly
+# Revisar ultima versión de Codeberg
+LATEST_VERSION=$(curl -s https://codeberg.org/fairyglade/ly/releases/latest | grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+' | head -n 1)
+
+if [ -z "$LATEST_VERSION" ]; then
+    red "Error al lograr la ultima versión de ly." && exit 1
+fi
+
+# Descargar ultima versión de ly
+wget https://codeberg.org/fairyglade/ly/archive/$LATEST_VERSION.zip
+7z x $LATEST_VERSION.zip && cd ly
 
 # Compilar y activar servicio de systemd
 sudo ../zig-x86_64-linux-0.15.2/zig build installexe 
