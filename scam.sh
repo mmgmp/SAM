@@ -97,13 +97,12 @@ cp -r scripts/{menus/*,notifications/*,user-tools/*} ~/
 # Instalar Starship prompt
 curl -sS https://starship.rs/install.sh | sh
 sudo mv /usr/local/bin/starship /usr/bin/
-source ~/.bashrc && rm ~/.bash_history
-starship preset plain-text-symbols -o ~/.config/starship.toml
+source ~/.bashrc && starship preset plain-text-symbols -o ~/.config/starship.toml
 
 # Historial de bash en XDG
 mkdir -p ~/.local/state/bash && mv ~/.bash_history ~/.local/state/bash/history
 
 # Configuracion de git en XDG
-mkdir -p ~/.config/git && touch ~/.config/git/config && rm ~/.gitconfig
+mkdir -p ~/.config/git && mv ~/.gitconfig ~/.config/git/config 
 
 echo -e "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
