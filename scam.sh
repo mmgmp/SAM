@@ -8,7 +8,7 @@ read -p "Selección/es (Enter para saltar): " desktop_choices
 
 for choice in $desktop_choices; do
 	case $choice in
-		1) bash ./ress/wm/sway.sh || exit 1 ;;
+		1) bash ./res/wm/sway.sh || exit 1 ;;
         2) bash ./res/wm/niri.sh && bash ./res/standalone/xwayland-satellite.sh || exit 1 ;;
     esac
 done
@@ -55,11 +55,6 @@ wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 chmod +x yt-dlp
 sudo mv -f yt-dlp /usr/bin/yt-dlp
 
-# Instalar Starship prompt
-curl -sS https://starship.rs/install.sh | sh
-sudo mv /usr/local/bin/starship /usr/bin/
-starship preset plain-text-symbols -o ~/.config/starship.toml
-
 # Preguntar si quieres instalar auto-cpufreq
 read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
 if [ "$auto_cpufreq" = "s" ] || [ "$auto_cpufreq" = "S" ]; then
@@ -88,13 +83,6 @@ rm ~/.sudo_as_admin_successful
 [ -d /etc/udev/rules.d/ ] || mkdir -p /etc/udev/rules.d/
 echo 'ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"' | sudo tee /etc/udev/rules.d/99-udisks2.rules
 
-# Historial de bash en XDG
-mkdir -p ~/.local/state/bash && touch ~/.local/state/bash/history
-source ~/.bashrc && rm ~/.bash_history
-
-# Configuracion de git en XDG
-mkdir -p ~/.config/git && touch ~/.config/git/config && rm ~/.gitconfig
-
 # Crear carpetas del usuario
 xdg-user-dirs-update
 
@@ -104,6 +92,18 @@ cp -r dotfiles/{.bashrc,.profile,.config,.local} ~/
 
 # Instalar mis scripts
 git clone https://github.com/mmgmp/scrips
-cp -r scripts/menus/* scripts/notifications/* scripts/user-tools/* ~/
+cp -r scripts/{menus/*,notifications/*,user-tools/*} ~/
+
+# Instalar Starship prompt
+curl -sS https://starship.rs/install.sh | sh
+sudo mv /usr/local/bin/starship /usr/bin/
+source ~/.bashrc && rm ~/.bash_history
+starship preset plain-text-symbols -o ~/.config/starship.toml
+
+# Historial de bash en XDG
+mkdir -p ~/.local/state/bash && mv ~/.bash_history ~/.local/state/bash/history
+
+# Configuracion de git en XDG
+mkdir -p ~/.config/git && touch ~/.config/git/config && rm ~/.gitconfig
 
 echo -e "\nCompletado, puedes reiniciar el ordenador con el comando 'systemctl reboot'\n"
