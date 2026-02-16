@@ -16,7 +16,7 @@ wget https://codeberg.org/fairyglade/ly/archive/v1.2.0.zip
 7z x v1.2.0.zip && cd ly
 
 # Compilar y activar servicio de systemd
-sudo ~/SAM/zig-x86_64-linux-0.15.2/zig build installexe 
+sudo ../zig-x86_64-linux-0.15.2/zig build installexe 
 sudo systemctl enable ly.service
 
 sudo sed -i 's/clear_password = false/clear_password = true/' /etc/ly/config.ini
