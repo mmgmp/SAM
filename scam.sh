@@ -9,7 +9,7 @@ read -p "Selección/es (Enter para saltar): " desktop_choices
 for choice in $desktop_choices; do
 	case $choice in
 		1) bash ./res/wm/sway.sh || exit 1 ;;
-        2) bash ./res/wm/niri.sh && bash ./res/standalone/xwayland-satellite.sh || exit 1 ;;
+        2) bash ./res/wm/niri.sh && bash ./res/std/xwayland-satellite.sh || exit 1 ;;
     esac
 done
 
@@ -48,7 +48,10 @@ cp FiraMono/Fira*.otf ~/.local/share/fonts
 fc-cache -f
 
 # Instalar Ly (display manager)
-bash ./res/standalone/ly.sh
+bash ./res/std/ly.sh
+
+# Instalar Newsraft (rss)
+bash ./res/std/newsraft.sh
 
 # Descargar yt-dlp de github
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
