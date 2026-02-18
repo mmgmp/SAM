@@ -18,6 +18,7 @@ cargo build --release
 [ -d /usr/share/wayland-sessions/ ] || sudo mkdir /usr/share/wayland-sessions/
 [ -d /usr/share/xdg-desktop-portal/ ] || sudo mkdir /usr/share/xdg-desktop-portal/
 
+# Usar GTK3 como selector de archivos
 echo "org.freedesktop.impl.portal.FileChooser=gtk;" >> resources/niri-portals.conf
 
 # Mover los archivos
