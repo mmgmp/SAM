@@ -59,12 +59,26 @@ chmod +x yt-dlp
 sudo mv -f yt-dlp /usr/bin/yt-dlp
 
 # Preguntar si quieres instalar auto-cpufreq
-read -p "¿Quieres instalar auto-cpufreq? (s/N): " auto_cpufreq
-if [ "$auto_cpufreq" = "s" ] || [ "$auto_cpufreq" = "S" ]; then
-    bash ./res/auto-cpufreq.sh
-else
-    echo "No se instalará auto-cpufreq."
-fi
+while true; do
+	echo -e "\n¿Quieres instalar auto-cpufreq?\n[Ayuda a prolongar la batería en los portátiles]\n"
+	read -p "(s/n): " answer
+	case $answer in
+		[Ss]) bash ./res/auto-cpufreq.sh && break ;;
+        [Nn]) echo "No se instalará auto-cpufreq." && break ;;
+        *) echo "Por favor, introduce s o n." ;;
+    esac
+done
+
+# Preguntar si quieres instalar Typst
+while true; do
+	echo -e "\n¿Quieres instalar Typst?\n[Alternativa moderna a LaTeX]\n"
+	read -p "(s/n): " answer
+	case $answer in
+		[Ss]) bash ./res/std/typst.sh && break ;;
+        [Nn]) echo "No se instalará Typst." && break ;;
+        *) echo "Por favor, introduce s o n." ;;
+    esac
+done
 
 #===== CONFIGURACIÓN =====#
 
